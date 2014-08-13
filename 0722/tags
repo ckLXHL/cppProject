@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ANIMALS_H_	animals.h	2;"	d
+HANDLE_H	handle.h	2;"	d
+add	animals.h	/^		cat* add();$/;"	p	class:cat	access:public	signature:()
+add	animals.h	/^		dog* add();$/;"	p	class:dog	access:public	signature:()
+add	animals.h	/^		elephent* add();$/;"	p	class:elephent	access:public	signature:()
+add	animals.h	/^		virtual animal* add() = 0;$/;"	p	class:animal	access:public	signature:()
+animal	animals.h	/^		animal(const std::string &name, const std::string &cata):$/;"	f	class:animal	access:public	signature:(const std::string &name, const std::string &cata)
+animal	animals.h	/^class animal{$/;"	c
+animal::add	animals.h	/^		virtual animal* add() = 0;$/;"	p	class:animal	access:public	signature:()
+animal::animal	animals.h	/^		animal(const std::string &name, const std::string &cata):$/;"	f	class:animal	access:public	signature:(const std::string &name, const std::string &cata)
+animal::cata_	animals.h	/^		std::string cata_;$/;"	m	class:animal	access:private
+animal::name_	animals.h	/^		std::string name_;$/;"	m	class:animal	access:private
+animal::operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, cat&);$/;"	p	class:animal	access:friend	signature:(std::ostream&, cat&)
+animal::operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, dog&);$/;"	p	class:animal	access:friend	signature:(std::ostream&, dog&)
+animal::operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, elephent&);$/;"	p	class:animal	access:friend	signature:(std::ostream&, elephent&)
+animal::~animal	animals.h	/^		virtual ~animal();$/;"	p	class:animal	access:public	signature:()
+cat	animals.h	/^		cat(const std::string &name, const std::string &cata):$/;"	f	class:cat	access:public	signature:(const std::string &name, const std::string &cata)
+cat	animals.h	/^class cat : public animal {$/;"	c	inherits:animal
+cat::add	animals.h	/^		cat* add();$/;"	p	class:cat	access:public	signature:()
+cat::cat	animals.h	/^		cat(const std::string &name, const std::string &cata):$/;"	f	class:cat	access:public	signature:(const std::string &name, const std::string &cata)
+cat::num_	animals.h	/^		int num_;$/;"	m	class:cat	access:private
+cat::operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, cat&);$/;"	p	class:cat	access:friend	signature:(std::ostream&, cat&)
+cata_	animals.h	/^		std::string cata_;$/;"	m	class:animal	access:private
+dog	animals.h	/^		dog(const std::string &name, const std::string &cata):$/;"	f	class:dog	access:public	signature:(const std::string &name, const std::string &cata)
+dog	animals.h	/^class dog : public animal {$/;"	c	inherits:animal
+dog::add	animals.h	/^		dog* add();$/;"	p	class:dog	access:public	signature:()
+dog::dog	animals.h	/^		dog(const std::string &name, const std::string &cata):$/;"	f	class:dog	access:public	signature:(const std::string &name, const std::string &cata)
+dog::num_	animals.h	/^		int num_;$/;"	m	class:dog	access:private
+dog::operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, dog&);$/;"	p	class:dog	access:friend	signature:(std::ostream&, dog&)
+elephent	animals.h	/^		elephent(const std::string &name, const std::string &cata):$/;"	f	class:elephent	access:public	signature:(const std::string &name, const std::string &cata)
+elephent	animals.h	/^class elephent : public animal {$/;"	c	inherits:animal
+elephent::add	animals.h	/^		elephent* add();$/;"	p	class:elephent	access:public	signature:()
+elephent::elephent	animals.h	/^		elephent(const std::string &name, const std::string &cata):$/;"	f	class:elephent	access:public	signature:(const std::string &name, const std::string &cata)
+elephent::num_	animals.h	/^		int num_;$/;"	m	class:elephent	access:private
+elephent::operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, elephent&);$/;"	p	class:elephent	access:friend	signature:(std::ostream&, elephent&)
+handle	handle.cc	/^handle<T>::handle(T &a) {$/;"	f	class:handle	signature:(T &a)
+handle	handle.cc	/^handle<T>::handle<T>(handle<T> &a) {$/;"	f	class:handle	signature:(handle<T> &a)
+handle	handle.h	/^		handle(): ptr_(0) { };$/;"	f	class:handle	access:public	signature:()
+handle	handle.h	/^		handle(T&);$/;"	p	class:handle	access:public	signature:(T&)
+handle	handle.h	/^		handle(handle&);$/;"	p	class:handle	access:public	signature:(handle&)
+handle	handle.h	/^class handle{$/;"	c
+handle::handle	handle.cc	/^handle<T>::handle(T &a) {$/;"	f	class:handle	signature:(T &a)
+handle::handle	handle.cc	/^handle<T>::handle<T>(handle<T> &a) {$/;"	f	class:handle	signature:(handle<T> &a)
+handle::handle	handle.h	/^		handle(): ptr_(0) { };$/;"	f	class:handle	access:public	signature:()
+handle::handle	handle.h	/^		handle(T&);$/;"	p	class:handle	access:public	signature:(T&)
+handle::handle	handle.h	/^		handle(handle&);$/;"	p	class:handle	access:public	signature:(handle&)
+handle::operator =	handle.cc	/^handle &handle::operator=(handle &a) {$/;"	f	class:handle	signature:(handle &a)
+handle::operator =	handle.h	/^		handle &operator=(handle&);$/;"	p	class:handle	access:public	signature:(handle&)
+handle::ptr_	handle.h	/^		T *ptr_;$/;"	m	class:handle	access:private
+handle::~handle	handle.h	/^		virtual ~handle() { delete ptr_; };$/;"	f	class:handle	access:public	signature:()
+name_	animals.h	/^		std::string name_;$/;"	m	class:animal	access:private
+num_	animals.h	/^		int num_;$/;"	m	class:cat	access:private
+num_	animals.h	/^		int num_;$/;"	m	class:dog	access:private
+num_	animals.h	/^		int num_;$/;"	m	class:elephent	access:private
+operator <<	animals.cc	/^std::ostream &operator<<(std::ostream&, cat &a) {$/;"	f	signature:(std::ostream&, cat &a)
+operator <<	animals.cc	/^std::ostream &operator<<(std::ostream&, dog &a) {$/;"	f	signature:(std::ostream&, dog &a)
+operator <<	animals.cc	/^std::ostream &operator<<(std::ostream&, elephent &a) {$/;"	f	signature:(std::ostream&, elephent &a)
+operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, cat&);$/;"	p	class:animal	access:friend	signature:(std::ostream&, cat&)
+operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, cat&);$/;"	p	class:cat	access:friend	signature:(std::ostream&, cat&)
+operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, dog&);$/;"	p	class:animal	access:friend	signature:(std::ostream&, dog&)
+operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, dog&);$/;"	p	class:dog	access:friend	signature:(std::ostream&, dog&)
+operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, elephent&);$/;"	p	class:animal	access:friend	signature:(std::ostream&, elephent&)
+operator <<	animals.h	/^	friend std::ostream &operator<<(std::ostream&, elephent&);$/;"	p	class:elephent	access:friend	signature:(std::ostream&, elephent&)
+operator <<	animals.h	/^std::ostream &operator<<(std::ostream&, cat&);$/;"	p	signature:(std::ostream&, cat&)
+operator <<	animals.h	/^std::ostream &operator<<(std::ostream&, dog&);$/;"	p	signature:(std::ostream&, dog&)
+operator <<	animals.h	/^std::ostream &operator<<(std::ostream&, elephent&);$/;"	p	signature:(std::ostream&, elephent&)
+operator =	handle.cc	/^handle &handle::operator=(handle &a) {$/;"	f	class:handle	signature:(handle &a)
+operator =	handle.h	/^		handle &operator=(handle&);$/;"	p	class:handle	access:public	signature:(handle&)
+ptr_	handle.h	/^		T *ptr_;$/;"	m	class:handle	access:private
+~animal	animals.h	/^		virtual ~animal();$/;"	p	class:animal	access:public	signature:()
+~handle	handle.h	/^		virtual ~handle() { delete ptr_; };$/;"	f	class:handle	access:public	signature:()

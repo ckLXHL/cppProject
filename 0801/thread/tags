@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ERR_EXIT	WR.h	17;"	d
+EVENT_MAX	server_epoll.c	2;"	d	file:
+MAXLINE	WR.h	16;"	d
+_WR_H_	WR.h	2;"	d
+do_epoll_server	server_epoll.c	/^void do_epoll_server(int listenfd) {$/;"	f	signature:(int listenfd)
+epoll_handle_date	server_epoll.c	/^void epoll_handle_date(epoll_t *ep, int i) {$/;"	f	signature:(epoll_t *ep, int i)
+epoll_handle_listen	server_epoll.c	/^void epoll_handle_listen(epoll_t *ep) {$/;"	f	signature:(epoll_t *ep)
+epoll_handle_wait	server_epoll.c	/^void epoll_handle_wait(epoll_t *ep) {$/;"	f	signature:(epoll_t *ep)
+epoll_init	server_epoll.c	/^void epoll_init(epoll_t *ep, int listenfd) {$/;"	f	signature:(epoll_t *ep, int listenfd)
+epoll_t	server_epoll.c	/^}epoll_t;$/;"	t	typeref:struct:epoll_tag	file:
+epoll_tag	server_epoll.c	/^typedef struct epoll_tag {$/;"	s	file:
+epoll_tag::epollfd_	server_epoll.c	/^	int epollfd_;$/;"	m	struct:epoll_tag	file:	access:public
+epoll_tag::events_	server_epoll.c	/^	struct epoll_event events_[EVENT_MAX];$/;"	m	struct:epoll_tag	typeref:struct:epoll_tag::epoll_event	file:	access:public
+epoll_tag::listenfd_	server_epoll.c	/^	int listenfd_;$/;"	m	struct:epoll_tag	file:	access:public
+epoll_tag::nready_	server_epoll.c	/^	int nready_;$/;"	m	struct:epoll_tag	file:	access:public
+epollfd_	server_epoll.c	/^	int epollfd_;$/;"	m	struct:epoll_tag	file:	access:public
+events_	server_epoll.c	/^	struct epoll_event events_[EVENT_MAX];$/;"	m	struct:epoll_tag	typeref:struct:epoll_tag::epoll_event	file:	access:public
+listenfd_	server_epoll.c	/^	int listenfd_;$/;"	m	struct:epoll_tag	file:	access:public
+main	main.cc	/^int main() {$/;"	f	signature:()
+main	server_epoll.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+nready_	server_epoll.c	/^	int nready_;$/;"	m	struct:epoll_tag	file:	access:public
+pass	thread.h	/^		static void* pass(void *arg) { $/;"	f	class:thread	access:public	signature:(void *arg)
+print	main.cc	/^int print() {$/;"	f	signature:()
+readline	WR.c	/^ssize_t readline(int sockfd, void *buf, size_t maxline) {$/;"	f	signature:(int sockfd, void *buf, size_t maxline)
+readline	WR.cpp	/^ssize_t readline(int sockfd, char *buf, size_t maxline) {$/;"	f	signature:(int sockfd, char *buf, size_t maxline)
+readline	WR.h	/^ssize_t readline(int sockfd, void *buf, size_t maxline);$/;"	p	signature:(int sockfd, void *buf, size_t maxline)
+readn	WR.c	/^ssize_t readn(int fd, void *buf, size_t count) {$/;"	f	signature:(int fd, void *buf, size_t count)
+readn	WR.cpp	/^ssize_t readn(int fd, char *buf, size_t count) {$/;"	f	signature:(int fd, char *buf, size_t count)
+readn	WR.h	/^ssize_t readn(int fd, void *buf, size_t count);$/;"	p	signature:(int fd, void *buf, size_t count)
+recv_peek	WR.c	/^ssize_t recv_peek(int sockfd, void *buf, size_t len) {$/;"	f	signature:(int sockfd, void *buf, size_t len)
+recv_peek	WR.cpp	/^ssize_t recv_peek(int sockfd, char *buf, size_t len) {$/;"	f	signature:(int sockfd, char *buf, size_t len)
+recv_peek	WR.h	/^ssize_t recv_peek(int sockfd, void *buf, size_t len);$/;"	p	signature:(int sockfd, void *buf, size_t len)
+server_init	server_epoll.c	/^int server_init(){$/;"	f
+thread	thread.h	/^class thread {$/;"	c
+thread::pass	thread.h	/^		static void* pass(void *arg) { $/;"	f	class:thread	access:public	signature:(void *arg)
+writen	WR.c	/^ssize_t writen(int fd, const void *buf, size_t count) {$/;"	f	signature:(int fd, const void *buf, size_t count)
+writen	WR.cpp	/^ssize_t writen(int fd, const char *buf, size_t count) {$/;"	f	signature:(int fd, const char *buf, size_t count)
+writen	WR.h	/^ssize_t writen(int fd, const void *buf, size_t count);$/;"	p	signature:(int fd, const void *buf, size_t count)

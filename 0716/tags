@@ -1,0 +1,107 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CachedObj	safe_queue.h	/^template <class T> class CachedObj {$/;"	c
+CachedObj::add_to_freelist	safe_queue.h	/^		static void add_to_freelist(T*);$/;"	p	class:CachedObj	access:private	signature:(T*)
+CachedObj::add_to_freelist	safe_queue.h	/^void CachedObj<T>::add_to_freelist(T *p){$/;"	f	class:CachedObj	signature:(T *p)
+CachedObj::alloc_mem	safe_queue.h	/^		static std::allocator<T> alloc_mem;$/;"	m	class:CachedObj	access:private
+CachedObj::alloc_mem	safe_queue.h	/^template <class T> std::allocator<T> CachedObj<T>::alloc_mem;$/;"	m	class:CachedObj
+CachedObj::chunk	safe_queue.h	/^		static const std::size_t chunk;$/;"	m	class:CachedObj	access:private
+CachedObj::chunk	safe_queue.h	/^template <class T> const size_t CachedObj<T>::chunk = 24;$/;"	m	class:CachedObj
+CachedObj::freeStore	safe_queue.h	/^		static T *freeStore;$/;"	m	class:CachedObj	access:private
+CachedObj::freeStore	safe_queue.h	/^template <class T> T *CachedObj<T>::freeStore = 0;$/;"	m	class:CachedObj
+CachedObj::next	safe_queue.h	/^		T *next;$/;"	m	class:CachedObj	access:protected
+CachedObj::operator delete	safe_queue.h	/^		void operator delete(void *, std::size_t);$/;"	p	class:CachedObj	access:public	signature:(void *, std::size_t)
+CachedObj::operator delete	safe_queue.h	/^void CachedObj<T>::operator delete(void *p, size_t){$/;"	f	class:CachedObj	signature:(void *p, size_t)
+CachedObj::operator new	safe_queue.h	/^		void *operator new(std::size_t);$/;"	p	class:CachedObj	access:public	signature:(std::size_t)
+CachedObj::operator new	safe_queue.h	/^void *CachedObj<T>::operator new(size_t sz){$/;"	f	class:CachedObj	signature:(size_t sz)
+CachedObj::~CachedObj	safe_queue.h	/^		virtual ~CachedObj() { }$/;"	f	class:CachedObj	access:public	signature:()
+__SAFE_QUEUE_H__	safe_queue.h	2;"	d
+add_to_freelist	safe_queue.h	/^		static void add_to_freelist(T*);$/;"	p	class:CachedObj	access:private	signature:(T*)
+add_to_freelist	safe_queue.h	/^void CachedObj<T>::add_to_freelist(T *p){$/;"	f	class:CachedObj	signature:(T *p)
+alloc_mem	safe_queue.h	/^		static std::allocator<T> alloc_mem;$/;"	m	class:CachedObj	access:private
+alloc_mem	safe_queue.h	/^template <class T> std::allocator<T> CachedObj<T>::alloc_mem;$/;"	m	class:CachedObj
+assign	safe_queue.h	/^			void assign(it, it);$/;"	p	class:my_queue	access:public	signature:(it, it)
+assign	safe_queue.h	/^inline void my_queue<T>::assign(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+chunk	safe_queue.h	/^		static const std::size_t chunk;$/;"	m	class:CachedObj	access:private
+chunk	safe_queue.h	/^template <class T> const size_t CachedObj<T>::chunk = 24;$/;"	m	class:CachedObj
+copy_ele	safe_queue.h	/^		void copy_ele(const my_queue<T>&);$/;"	p	class:my_queue	access:private	signature:(const my_queue<T>&)
+copy_ele	safe_queue.h	/^		void copy_ele(it, it);$/;"	p	class:my_queue	access:private	signature:(it, it)
+copy_ele	safe_queue.h	/^inline void my_queue<T>::copy_ele(const my_queue& q){$/;"	f	class:my_queue	signature:(const my_queue& q)
+copy_ele	safe_queue.h	/^inline void my_queue<T>::copy_ele(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+destroy	safe_queue.h	/^		void destroy();$/;"	p	class:my_queue	access:private	signature:()
+destroy	safe_queue.h	/^inline void my_queue<T>::destroy(){$/;"	f	class:my_queue	signature:()
+empty	safe_queue.h	/^		bool empty(){ return head == 0; }$/;"	f	class:my_queue	access:public	signature:()
+freeStore	safe_queue.h	/^		static T *freeStore;$/;"	m	class:CachedObj	access:private
+freeStore	safe_queue.h	/^template <class T> T *CachedObj<T>::freeStore = 0;$/;"	m	class:CachedObj
+front	safe_queue.h	/^		T& front(){ return head->item; }$/;"	f	class:my_queue	access:public	signature:()
+front	safe_queue.h	/^		const T& front() const { return head->item; };$/;"	f	class:my_queue	access:public	signature:() const
+getSize	safe_queue.h	/^		const int getSize()const;$/;"	p	class:my_queue	access:public	signature:() const
+getSize	safe_queue.h	/^inline const int my_queue<T>::getSize() const{$/;"	f	class:my_queue	signature:() const
+head	safe_queue.h	/^		my_queueItem<T> *head;$/;"	m	class:my_queue	access:private
+item	safe_queue.h	/^	T item;$/;"	m	class:my_queueItem	access:private
+main	main.cpp	/^int main() {$/;"	f	signature:()
+my_queue	safe_queue.h	/^			my_queue(it beg, it end):$/;"	f	class:my_queue	access:public	signature:(it beg, it end)
+my_queue	safe_queue.h	/^		my_queue(): size(0),head(0), tail(0) { };$/;"	f	class:my_queue	access:public	signature:()
+my_queue	safe_queue.h	/^		my_queue(const my_queue<T>& q): head(0), tail(0), size(0) { copy_ele(q); };$/;"	f	class:my_queue	access:public	signature:(const my_queue<T>& q)
+my_queue	safe_queue.h	/^template <class T> class my_queue {$/;"	c
+my_queue::assign	safe_queue.h	/^			void assign(it, it);$/;"	p	class:my_queue	access:public	signature:(it, it)
+my_queue::assign	safe_queue.h	/^inline void my_queue<T>::assign(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+my_queue::copy_ele	safe_queue.h	/^		void copy_ele(const my_queue<T>&);$/;"	p	class:my_queue	access:private	signature:(const my_queue<T>&)
+my_queue::copy_ele	safe_queue.h	/^		void copy_ele(it, it);$/;"	p	class:my_queue	access:private	signature:(it, it)
+my_queue::copy_ele	safe_queue.h	/^inline void my_queue<T>::copy_ele(const my_queue& q){$/;"	f	class:my_queue	signature:(const my_queue& q)
+my_queue::copy_ele	safe_queue.h	/^inline void my_queue<T>::copy_ele(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+my_queue::destroy	safe_queue.h	/^		void destroy();$/;"	p	class:my_queue	access:private	signature:()
+my_queue::destroy	safe_queue.h	/^inline void my_queue<T>::destroy(){$/;"	f	class:my_queue	signature:()
+my_queue::empty	safe_queue.h	/^		bool empty(){ return head == 0; }$/;"	f	class:my_queue	access:public	signature:()
+my_queue::front	safe_queue.h	/^		T& front(){ return head->item; }$/;"	f	class:my_queue	access:public	signature:()
+my_queue::front	safe_queue.h	/^		const T& front() const { return head->item; };$/;"	f	class:my_queue	access:public	signature:() const
+my_queue::getSize	safe_queue.h	/^		const int getSize()const;$/;"	p	class:my_queue	access:public	signature:() const
+my_queue::getSize	safe_queue.h	/^inline const int my_queue<T>::getSize() const{$/;"	f	class:my_queue	signature:() const
+my_queue::head	safe_queue.h	/^		my_queueItem<T> *head;$/;"	m	class:my_queue	access:private
+my_queue::my_queue	safe_queue.h	/^			my_queue(it beg, it end):$/;"	f	class:my_queue	access:public	signature:(it beg, it end)
+my_queue::my_queue	safe_queue.h	/^		my_queue(): size(0),head(0), tail(0) { };$/;"	f	class:my_queue	access:public	signature:()
+my_queue::my_queue	safe_queue.h	/^		my_queue(const my_queue<T>& q): head(0), tail(0), size(0) { copy_ele(q); };$/;"	f	class:my_queue	access:public	signature:(const my_queue<T>& q)
+my_queue::operator <<	safe_queue.h	/^	friend std::ostream& operator << <T>(std::ostream&, const my_queue<T>&);$/;"	p	class:my_queue	access:friend	signature:(std::ostream&, const my_queue<T>&)
+my_queue::operator =	safe_queue.h	/^		my_queue& operator = (const my_queue&);$/;"	p	class:my_queue	access:public	signature:(const my_queue&)
+my_queue::operator =	safe_queue.h	/^inline my_queue<T>& my_queue<T>::operator = (const my_queue<T>& Q){$/;"	f	class:my_queue	signature:(const my_queue<T>& Q)
+my_queue::pop	safe_queue.h	/^		void pop();$/;"	p	class:my_queue	access:public	signature:()
+my_queue::pop	safe_queue.h	/^inline void my_queue<T>::pop(){$/;"	f	class:my_queue	signature:()
+my_queue::print	safe_queue.h	/^		std::ostream& print(std::ostream&);$/;"	p	class:my_queue	access:public	signature:(std::ostream&)
+my_queue::print	safe_queue.h	/^inline std::ostream& my_queue<T>::print(std::ostream& os){$/;"	f	class:my_queue	signature:(std::ostream& os)
+my_queue::push	safe_queue.h	/^		void push(const T&);$/;"	p	class:my_queue	access:public	signature:(const T&)
+my_queue::push	safe_queue.h	/^inline void my_queue<T>::push(const T& t){$/;"	f	class:my_queue	signature:(const T& t)
+my_queue::size	safe_queue.h	/^		int size;$/;"	m	class:my_queue	access:private
+my_queue::tail	safe_queue.h	/^		my_queueItem<T> *tail;$/;"	m	class:my_queue	access:private
+my_queue::~my_queue	safe_queue.h	/^		~my_queue() { destroy(); }$/;"	f	class:my_queue	access:public	signature:()
+my_queueItem	safe_queue.h	/^	my_queueItem(const T &val): item(val), next(0) { }$/;"	f	class:my_queueItem	access:private	signature:(const T &val)
+my_queueItem	safe_queue.h	/^class my_queueItem: public CachedObj< my_queueItem<T> > {$/;"	c	inherits:CachedObj
+my_queueItem::item	safe_queue.h	/^	T item;$/;"	m	class:my_queueItem	access:private
+my_queueItem::my_queueItem	safe_queue.h	/^	my_queueItem(const T &val): item(val), next(0) { }$/;"	f	class:my_queueItem	access:private	signature:(const T &val)
+my_queueItem::next	safe_queue.h	/^	my_queueItem *next;$/;"	m	class:my_queueItem	access:private
+my_queueItem::operator <<	safe_queue.h	/^	friend std::ostream& operator << <T>(std::ostream&, const my_queue<T>&);$/;"	p	class:my_queueItem	access:friend	signature:(std::ostream&, const my_queue<T>&)
+next	safe_queue.h	/^		T *next;$/;"	m	class:CachedObj	access:protected
+next	safe_queue.h	/^	my_queueItem *next;$/;"	m	class:my_queueItem	access:private
+operator <<	safe_queue.h	/^	friend std::ostream& operator << <T>(std::ostream&, const my_queue<T>&);$/;"	p	class:my_queue	access:friend	signature:(std::ostream&, const my_queue<T>&)
+operator <<	safe_queue.h	/^	friend std::ostream& operator << <T>(std::ostream&, const my_queue<T>&);$/;"	p	class:my_queueItem	access:friend	signature:(std::ostream&, const my_queue<T>&)
+operator <<	safe_queue.h	/^inline std::ostream& operator << (std::ostream& os, const my_queue<T>& q) {$/;"	f	signature:(std::ostream& os, const my_queue<T>& q)
+operator <<	safe_queue.h	/^template <class T> std::ostream& operator << (std::ostream&, const my_queue<T>&);$/;"	p	signature:(std::ostream&, const my_queue<T>&)
+operator =	safe_queue.h	/^		my_queue& operator = (const my_queue&);$/;"	p	class:my_queue	access:public	signature:(const my_queue&)
+operator =	safe_queue.h	/^inline my_queue<T>& my_queue<T>::operator = (const my_queue<T>& Q){$/;"	f	class:my_queue	signature:(const my_queue<T>& Q)
+operator delete	safe_queue.h	/^		void operator delete(void *, std::size_t);$/;"	p	class:CachedObj	access:public	signature:(void *, std::size_t)
+operator delete	safe_queue.h	/^void CachedObj<T>::operator delete(void *p, size_t){$/;"	f	class:CachedObj	signature:(void *p, size_t)
+operator new	safe_queue.h	/^		void *operator new(std::size_t);$/;"	p	class:CachedObj	access:public	signature:(std::size_t)
+operator new	safe_queue.h	/^void *CachedObj<T>::operator new(size_t sz){$/;"	f	class:CachedObj	signature:(size_t sz)
+pop	safe_queue.h	/^		void pop();$/;"	p	class:my_queue	access:public	signature:()
+pop	safe_queue.h	/^inline void my_queue<T>::pop(){$/;"	f	class:my_queue	signature:()
+print	safe_queue.h	/^		std::ostream& print(std::ostream&);$/;"	p	class:my_queue	access:public	signature:(std::ostream&)
+print	safe_queue.h	/^inline std::ostream& my_queue<T>::print(std::ostream& os){$/;"	f	class:my_queue	signature:(std::ostream& os)
+push	safe_queue.h	/^		void push(const T&);$/;"	p	class:my_queue	access:public	signature:(const T&)
+push	safe_queue.h	/^inline void my_queue<T>::push(const T& t){$/;"	f	class:my_queue	signature:(const T& t)
+size	safe_queue.h	/^		int size;$/;"	m	class:my_queue	access:private
+tail	safe_queue.h	/^		my_queueItem<T> *tail;$/;"	m	class:my_queue	access:private
+~CachedObj	safe_queue.h	/^		virtual ~CachedObj() { }$/;"	f	class:CachedObj	access:public	signature:()
+~my_queue	safe_queue.h	/^		~my_queue() { destroy(); }$/;"	f	class:my_queue	access:public	signature:()

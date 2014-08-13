@@ -1,0 +1,50 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ERR_EXIT	WR.h	17;"	d
+ERR_EXIT	server.c	11;"	d	file:
+EVENT_MAX	server_epoll.c	2;"	d	file:
+EVENT_MAX	server_epoll2.c	2;"	d	file:
+MAXLINE	WR.h	16;"	d
+_HANDLER_H_	handler.h	2;"	d
+_WR_H_	WR.h	2;"	d
+client_init	handler.c	/^int client_init();$/;"	p	file:
+client_init	handler.h	/^int client_init();$/;"	p	signature:()
+do_client_epoll	handler.c	/^void do_client_epoll(int fd) {$/;"	f	signature:(int fd)
+do_client_epoll	handler.h	/^void do_client_epoll(int fd);$/;"	p	signature:(int fd)
+do_client_poll	handler.c	/^void do_client_poll(int fd) {$/;"	f	signature:(int fd)
+do_client_poll	handler.h	/^void do_client_poll(int fd);$/;"	p	signature:(int fd)
+do_client_select	handler.c	/^void do_client_select(int fd) {$/;"	f	signature:(int fd)
+do_client_select	handler.h	/^void do_client_select(int fd);$/;"	p	signature:(int fd)
+do_epoll_server	server_epoll.c	/^void do_epoll_server(int listenfd) {$/;"	f	signature:(int listenfd)
+do_epoll_server	server_epoll2.c	/^void do_epoll_server(int listenfd) {$/;"	f	signature:(int listenfd)
+do_server_epoll	handler.c	/^void do_server_epoll(int fd);$/;"	p	file:	signature:(int fd)
+do_server_epoll	handler.h	/^void do_server_epoll(int fd);$/;"	p	signature:(int fd)
+do_server_poll	handler.c	/^void do_server_poll(int fd);$/;"	p	file:	signature:(int fd)
+do_server_poll	handler.h	/^void do_server_poll(int fd);$/;"	p	signature:(int fd)
+do_server_select	handler.c	/^void do_server_select(int fd);$/;"	p	file:	signature:(int fd)
+do_server_select	handler.h	/^void do_server_select(int fd);$/;"	p	signature:(int fd)
+do_service	server.c	/^void do_service(int peerfd)$/;"	f	signature:(int peerfd)
+epoll_init	server_epoll2.c	/^epoll_init(epoll_t* ep, int listenfd) {$/;"	f	signature:(epoll_t* ep, int listenfd)
+main	server.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	server_epoll.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	server_epoll2.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	server_poll.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	server_select.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+proc	server.c	/^void proc(int sig) {$/;"	f	signature:(int sig)
+readline	WR.c	/^ssize_t readline(int sockfd, void *buf, size_t maxline) {$/;"	f	signature:(int sockfd, void *buf, size_t maxline)
+readline	WR.h	/^ssize_t readline(int sockfd, void *buf, size_t maxline);$/;"	p	signature:(int sockfd, void *buf, size_t maxline)
+readn	WR.c	/^ssize_t readn(int fd, void *buf, size_t count) {$/;"	f	signature:(int fd, void *buf, size_t count)
+readn	WR.h	/^ssize_t readn(int fd, void *buf, size_t count);$/;"	p	signature:(int fd, void *buf, size_t count)
+recv_peek	WR.c	/^ssize_t recv_peek(int sockfd, void *buf, size_t len) {$/;"	f	signature:(int sockfd, void *buf, size_t len)
+recv_peek	WR.h	/^ssize_t recv_peek(int sockfd, void *buf, size_t len);$/;"	p	signature:(int sockfd, void *buf, size_t len)
+server_init	handler.c	/^int server_init();$/;"	p	file:
+server_init	handler.h	/^int server_init();$/;"	p	signature:()
+server_init	server_epoll.c	/^int server_init(){$/;"	f
+server_init	server_epoll2.c	/^int server_init(){$/;"	f
+server_init	server_select.c	/^int server_init() {$/;"	f
+writen	WR.c	/^ssize_t writen(int fd, const void *buf, size_t count) {$/;"	f	signature:(int fd, const void *buf, size_t count)
+writen	WR.h	/^ssize_t writen(int fd, const void *buf, size_t count);$/;"	p	signature:(int fd, const void *buf, size_t count)

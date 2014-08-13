@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ERR_EXIT	WR.h	17;"	d
+MAXLINE	WR.h	16;"	d
+SELECT_T_H_	select_t.h	2;"	d
+_WR_H_	WR.h	2;"	d
+__anon1::allset_	select_t.h	/^    fd_set allset_;$/;"	m	struct:__anon1	access:public
+__anon1::clients_	select_t.h	/^    int clients_[FD_SETSIZE];$/;"	m	struct:__anon1	access:public
+__anon1::handle_callback_	select_t.h	/^    void (*handle_callback_) (int , char *);$/;"	m	struct:__anon1	access:public
+__anon1::listenfd_	select_t.h	/^    int listenfd_;$/;"	m	struct:__anon1	access:public
+__anon1::maxfd_	select_t.h	/^    int maxfd_;$/;"	m	struct:__anon1	access:public
+__anon1::maxi_	select_t.h	/^    int maxi_;$/;"	m	struct:__anon1	access:public
+__anon1::nready_	select_t.h	/^    int nready_;$/;"	m	struct:__anon1	access:public
+__anon1::rset_	select_t.h	/^    fd_set rset_;$/;"	m	struct:__anon1	access:public
+allset_	select_t.h	/^    fd_set allset_;$/;"	m	struct:__anon1	access:public
+clients_	select_t.h	/^    int clients_[FD_SETSIZE];$/;"	m	struct:__anon1	access:public
+get_listen_fd	main.cpp	/^int get_listen_fd()$/;"	f	signature:()
+get_listen_fd	main.cpp	/^int get_listen_fd();$/;"	p	file:	signature:()
+handle_callback_	select_t.h	/^    void (*handle_callback_) (int , char *);$/;"	m	struct:__anon1	access:public
+handler	main.cpp	/^void handler(int fd, char *buf)$/;"	f	signature:(int fd, char *buf)
+listenfd_	select_t.h	/^    int listenfd_;$/;"	m	struct:__anon1	access:public
+main	main.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+maxfd_	select_t.h	/^    int maxfd_;$/;"	m	struct:__anon1	access:public
+maxi_	select_t.h	/^    int maxi_;$/;"	m	struct:__anon1	access:public
+nready_	select_t.h	/^    int nready_;$/;"	m	struct:__anon1	access:public
+readline	WR.cpp	/^ssize_t readline(int sockfd, char *buf, size_t maxline) {$/;"	f	signature:(int sockfd, char *buf, size_t maxline)
+readline	WR.h	/^ssize_t readline(int sockfd, char *buf, size_t maxline);$/;"	p	signature:(int sockfd, char *buf, size_t maxline)
+readn	WR.cpp	/^ssize_t readn(int fd, char *buf, size_t count) {$/;"	f	signature:(int fd, char *buf, size_t count)
+readn	WR.h	/^ssize_t readn(int fd, char *buf, size_t count);$/;"	p	signature:(int fd, char *buf, size_t count)
+recv_peek	WR.cpp	/^ssize_t recv_peek(int sockfd, char *buf, size_t len) {$/;"	f	signature:(int sockfd, char *buf, size_t len)
+recv_peek	WR.h	/^ssize_t recv_peek(int sockfd, char *buf, size_t len);$/;"	p	signature:(int sockfd, char *buf, size_t len)
+rset_	select_t.h	/^    fd_set rset_;$/;"	m	struct:__anon1	access:public
+select_add_fd	select_t.cpp	/^void select_add_fd(select_t *sel, int fd)$/;"	f	signature:(select_t *sel, int fd)
+select_add_fd	select_t.cpp	/^void select_add_fd(select_t *sel, int fd);$/;"	p	file:	signature:(select_t *sel, int fd)
+select_del_fd	select_t.cpp	/^void select_del_fd(select_t *sel, int i)$/;"	f	signature:(select_t *sel, int i)
+select_del_fd	select_t.cpp	/^void select_del_fd(select_t *sel, int i);$/;"	p	file:	signature:(select_t *sel, int i)
+select_do_wait	select_t.cpp	/^int select_do_wait(select_t *sel)$/;"	f	signature:(select_t *sel)
+select_do_wait	select_t.h	/^int select_do_wait(select_t *sel);$/;"	p	signature:(select_t *sel)
+select_handle_accept	select_t.cpp	/^void select_handle_accept(select_t *sel)$/;"	f	signature:(select_t *sel)
+select_handle_accept	select_t.h	/^void select_handle_accept(select_t *sel);$/;"	p	signature:(select_t *sel)
+select_handle_data	select_t.cpp	/^void select_handle_data(select_t *sel)$/;"	f	signature:(select_t *sel)
+select_handle_data	select_t.h	/^void select_handle_data(select_t *sel);$/;"	p	signature:(select_t *sel)
+select_init	select_t.cpp	/^void select_init(select_t *sel, int listenfd)$/;"	f	signature:(select_t *sel, int listenfd)
+select_init	select_t.h	/^void select_init(select_t *sel, int listenfd);$/;"	p	signature:(select_t *sel, int listenfd)
+select_set_callback	select_t.cpp	/^void select_set_callback(select_t *sel, void (*handler) (int, char*))$/;"	f	signature:(select_t *sel, void (*handler) (int, char*))
+select_set_callback	select_t.h	/^void select_set_callback(select_t *sel, void (*handle_callback) (int, char *));$/;"	p	signature:(select_t *sel, void (*handle_callback) (int, char *))
+select_t	select_t.h	/^} select_t;$/;"	t	typeref:struct:__anon1
+writen	WR.cpp	/^ssize_t writen(int fd, const char *buf, size_t count) {$/;"	f	signature:(int fd, const char *buf, size_t count)
+writen	WR.h	/^ssize_t writen(int fd, const char *buf, size_t count);$/;"	p	signature:(int fd, const char *buf, size_t count)

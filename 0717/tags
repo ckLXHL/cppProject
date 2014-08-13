@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+age_	copy_construct.cpp	/^		int age_;$/;"	m	class:person	file:	access:private
+main	copy_construct.cpp	/^int main() {$/;"	f	signature:()
+name_	copy_construct.cpp	/^		string name_;$/;"	m	class:person	file:	access:private
+person	copy_construct.cpp	/^		person(const person& oth):$/;"	f	class:person	access:public	signature:(const person& oth)
+person	copy_construct.cpp	/^		person(string& a, int b, double c): $/;"	f	class:person	access:public	signature:(string& a, int b, double c)
+person	copy_construct.cpp	/^class person {$/;"	c	file:
+person::age_	copy_construct.cpp	/^		int age_;$/;"	m	class:person	file:	access:private
+person::name_	copy_construct.cpp	/^		string name_;$/;"	m	class:person	file:	access:private
+person::person	copy_construct.cpp	/^		person(const person& oth):$/;"	f	class:person	access:public	signature:(const person& oth)
+person::person	copy_construct.cpp	/^		person(string& a, int b, double c): $/;"	f	class:person	access:public	signature:(string& a, int b, double c)
+person::print	copy_construct.cpp	/^		void print() {$/;"	f	class:person	access:public	signature:()
+person::score_	copy_construct.cpp	/^		double score_;$/;"	m	class:person	file:	access:private
+print	copy_construct.cpp	/^		void print() {$/;"	f	class:person	access:public	signature:()
+score_	copy_construct.cpp	/^		double score_;$/;"	m	class:person	file:	access:private

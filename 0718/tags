@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN	Makefile	/^BIN=test_queue$/;"	m
+CC	Makefile	/^CC=g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -g$/;"	m
+COMPLEX_H	complex.h	2;"	d
+OBJS	Makefile	/^OBJS=Queue.o test_main.o$/;"	m
+SMART_PTR_H	smart_ptr.h	2;"	d
+cnt_	smart_ptr.h	/^		int *cnt_;$/;"	m	class:smart_ptr	access:private
+complex_num	complex.h	/^		complex_num(): real_(0), image_(0) { }$/;"	f	class:complex_num	access:public	signature:()
+complex_num	complex.h	/^		complex_num(int r, int im): real_(r), image_(im) { }$/;"	f	class:complex_num	access:public	signature:(int r, int im)
+complex_num	complex.h	/^class complex_num {$/;"	c
+complex_num::complex_num	complex.h	/^		complex_num(): real_(0), image_(0) { }$/;"	f	class:complex_num	access:public	signature:()
+complex_num::complex_num	complex.h	/^		complex_num(int r, int im): real_(r), image_(im) { }$/;"	f	class:complex_num	access:public	signature:(int r, int im)
+complex_num::image_	complex.h	/^		int image_;$/;"	m	class:complex_num	access:private
+complex_num::operator *	complex.h	/^	friend complex_num operator*(const complex_num&, const complex_num&);$/;"	p	class:complex_num	access:friend	signature:(const complex_num&, const complex_num&)
+complex_num::operator +	complex.h	/^	friend complex_num operator+(const complex_num&, const complex_num&);$/;"	p	class:complex_num	access:friend	signature:(const complex_num&, const complex_num&)
+complex_num::operator -	complex.h	/^	friend complex_num operator-(const complex_num&, const complex_num&);$/;"	p	class:complex_num	access:friend	signature:(const complex_num&, const complex_num&)
+complex_num::operator <<	complex.h	/^	friend std::ostream &operator<<(std::ostream&, complex_num&);$/;"	p	class:complex_num	access:friend	signature:(std::ostream&, complex_num&)
+complex_num::operator =	complex.h	/^		complex_num &operator=(const complex_num &cm) { real_ = cm.real_; image_ = cm.image_; }$/;"	f	class:complex_num	access:public	signature:(const complex_num &cm)
+complex_num::operator >>	complex.h	/^	friend std::istream &operator>>(std::istream&, complex_num&);$/;"	p	class:complex_num	access:friend	signature:(std::istream&, complex_num&)
+complex_num::real_	complex.h	/^		int real_;$/;"	m	class:complex_num	access:private
+complex_num::real_value	complex.h	/^		const double real_value() const ;$/;"	p	class:complex_num	access:public	signature:() const
+complex_num::~complex_num	complex.h	/^		~complex_num() { }$/;"	f	class:complex_num	access:public	signature:()
+image_	complex.h	/^		int image_;$/;"	m	class:complex_num	access:private
+operator *	complex.cpp	/^complex_num operator*(complex_num &cm1, complex_num &cm2) {$/;"	f	signature:(complex_num &cm1, complex_num &cm2)
+operator *	complex.h	/^	friend complex_num operator*(const complex_num&, const complex_num&);$/;"	p	class:complex_num	access:friend	signature:(const complex_num&, const complex_num&)
+operator *	smart_ptr.h	/^		smart_ptr &operator*() { return *ptr; }$/;"	f	class:smart_ptr	access:public	signature:()
+operator +	complex.cpp	/^complex_num operator+(complex_num &cm1, complex_num &cm2) {$/;"	f	signature:(complex_num &cm1, complex_num &cm2)
+operator +	complex.h	/^	friend complex_num operator+(const complex_num&, const complex_num&);$/;"	p	class:complex_num	access:friend	signature:(const complex_num&, const complex_num&)
+operator -	complex.cpp	/^complex_num operator-(complex_num &cm1, complex_num &cm2) {$/;"	f	signature:(complex_num &cm1, complex_num &cm2)
+operator -	complex.h	/^	friend complex_num operator-(const complex_num&, const complex_num&);$/;"	p	class:complex_num	access:friend	signature:(const complex_num&, const complex_num&)
+operator ->	smart_ptr.h	/^		smart_ptr *operator->() { return ptr; }$/;"	f	class:smart_ptr	access:public	signature:()
+operator <<	complex.cpp	/^ostream &operator<<(ostream &os, complex_num &cm) {$/;"	f	signature:(ostream &os, complex_num &cm)
+operator <<	complex.h	/^	friend std::ostream &operator<<(std::ostream&, complex_num&);$/;"	p	class:complex_num	access:friend	signature:(std::ostream&, complex_num&)
+operator =	complex.h	/^		complex_num &operator=(const complex_num &cm) { real_ = cm.real_; image_ = cm.image_; }$/;"	f	class:complex_num	access:public	signature:(const complex_num &cm)
+operator =	smart_ptr.h	/^		smart_ptr &operator=(const smart_ptr &); $/;"	p	class:smart_ptr	access:public	signature:(const smart_ptr &)
+operator =	smart_ptr.h	/^inline smart_ptr<T> &smart_ptr<T>::operator=(const smart_ptr<T> &p) {$/;"	f	class:smart_ptr	signature:(const smart_ptr<T> &p)
+operator >>	complex.cpp	/^istream &operator>>(istream &is, complex_num &cm) {$/;"	f	signature:(istream &is, complex_num &cm)
+operator >>	complex.h	/^	friend std::istream &operator>>(std::istream&, complex_num&);$/;"	p	class:complex_num	access:friend	signature:(std::istream&, complex_num&)
+ptr_	smart_ptr.h	/^		T *ptr_;$/;"	m	class:smart_ptr	access:private
+real_	complex.h	/^		int real_;$/;"	m	class:complex_num	access:private
+real_value	complex.h	/^		const double real_value() const ;$/;"	p	class:complex_num	access:public	signature:() const
+smart_ptr	smart_ptr.h	/^		smart_ptr(T *ptr, int *cnt): ptr_(ptr), cnt_(cnt) { }$/;"	f	class:smart_ptr	access:public	signature:(T *ptr, int *cnt)
+smart_ptr	smart_ptr.h	/^		smart_ptr(const smart_ptr& p): ptr_(p.ptr_), cnt_(p.cnt_) { ++*cnt; }$/;"	f	class:smart_ptr	access:public	signature:(const smart_ptr& p)
+smart_ptr	smart_ptr.h	/^class smart_ptr {$/;"	c
+smart_ptr::cnt_	smart_ptr.h	/^		int *cnt_;$/;"	m	class:smart_ptr	access:private
+smart_ptr::operator *	smart_ptr.h	/^		smart_ptr &operator*() { return *ptr; }$/;"	f	class:smart_ptr	access:public	signature:()
+smart_ptr::operator ->	smart_ptr.h	/^		smart_ptr *operator->() { return ptr; }$/;"	f	class:smart_ptr	access:public	signature:()
+smart_ptr::operator =	smart_ptr.h	/^		smart_ptr &operator=(const smart_ptr &); $/;"	p	class:smart_ptr	access:public	signature:(const smart_ptr &)
+smart_ptr::operator =	smart_ptr.h	/^inline smart_ptr<T> &smart_ptr<T>::operator=(const smart_ptr<T> &p) {$/;"	f	class:smart_ptr	signature:(const smart_ptr<T> &p)
+smart_ptr::ptr_	smart_ptr.h	/^		T *ptr_;$/;"	m	class:smart_ptr	access:private
+smart_ptr::smart_ptr	smart_ptr.h	/^		smart_ptr(T *ptr, int *cnt): ptr_(ptr), cnt_(cnt) { }$/;"	f	class:smart_ptr	access:public	signature:(T *ptr, int *cnt)
+smart_ptr::smart_ptr	smart_ptr.h	/^		smart_ptr(const smart_ptr& p): ptr_(p.ptr_), cnt_(p.cnt_) { ++*cnt; }$/;"	f	class:smart_ptr	access:public	signature:(const smart_ptr& p)
+smart_ptr::~smart_ptr	smart_ptr.h	/^		~smart_ptr() { if(--*cnt_ == 0) { delete cnt_; delete ptr_; }}$/;"	f	class:smart_ptr	access:public	signature:()
+~complex_num	complex.h	/^		~complex_num() { }$/;"	f	class:complex_num	access:public	signature:()
+~smart_ptr	smart_ptr.h	/^		~smart_ptr() { if(--*cnt_ == 0) { delete cnt_; delete ptr_; }}$/;"	f	class:smart_ptr	access:public	signature:()

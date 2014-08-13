@@ -1,0 +1,470 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN	Makefile	/^BIN=test$/;"	m
+CC	Makefile	/^CC=g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -g$/;"	m
+CONDITION_H	Condition.h	2;"	d
+COPYABLE	Copyable.h	2;"	d
+Condition	Condition.cpp	/^Condition::Condition(MutexLock &mutex)$/;"	f	class:Condition	signature:(MutexLock &mutex)
+Condition	Condition.h	/^        Condition(MutexLock &mutex);$/;"	p	class:Condition	access:public	signature:(MutexLock &mutex)
+Condition	Condition.h	/^class Condition : NonCopyable$/;"	c	inherits:NonCopyable
+Condition::Condition	Condition.cpp	/^Condition::Condition(MutexLock &mutex)$/;"	f	class:Condition	signature:(MutexLock &mutex)
+Condition::Condition	Condition.h	/^        Condition(MutexLock &mutex);$/;"	p	class:Condition	access:public	signature:(MutexLock &mutex)
+Condition::cond_	Condition.h	/^        pthread_cond_t cond_;$/;"	m	class:Condition	access:private
+Condition::mutex_	Condition.h	/^        MutexLock &mutex_;$/;"	m	class:Condition	access:private
+Condition::notify	Condition.cpp	/^void Condition::notify()$/;"	f	class:Condition	signature:()
+Condition::notify	Condition.h	/^        void notify();$/;"	p	class:Condition	access:public	signature:()
+Condition::notifyAll	Condition.cpp	/^void Condition::notifyAll()$/;"	f	class:Condition	signature:()
+Condition::notifyAll	Condition.h	/^        void notifyAll();$/;"	p	class:Condition	access:public	signature:()
+Condition::wait	Condition.cpp	/^void Condition::wait()$/;"	f	class:Condition	signature:()
+Condition::wait	Condition.h	/^        void wait();$/;"	p	class:Condition	access:public	signature:()
+Condition::~Condition	Condition.cpp	/^Condition::~Condition()$/;"	f	class:Condition	signature:()
+Condition::~Condition	Condition.h	/^        ~Condition();$/;"	p	class:Condition	access:public	signature:()
+Copyable	Copyable.h	/^class Copyable$/;"	c
+ERR_EXIT	InetAddress.cpp	2;"	d	file:
+ERR_EXIT	PollPoller.cpp	6;"	d	file:
+ERR_EXIT	Rio.cpp	8;"	d	file:
+ERR_EXIT	Socket.cpp	14;"	d	file:
+ERR_EXIT	TcpConnection.cpp	3;"	d	file:
+ERR_EXIT	TcpServer.cpp	9;"	d	file:
+ERR_EXIT	test_server.cpp	13;"	d	file:
+EchoServer	test_echo_server.cpp	/^        EchoServer(const InetAddress &addr)$/;"	f	class:EchoServer	access:public	signature:(const InetAddress &addr)
+EchoServer	test_echo_server.cpp	/^class EchoServer : NonCopyable$/;"	c	file:	inherits:NonCopyable
+EchoServer::EchoServer	test_echo_server.cpp	/^        EchoServer(const InetAddress &addr)$/;"	f	class:EchoServer	access:public	signature:(const InetAddress &addr)
+EchoServer::onConnect	test_echo_server.cpp	/^        void onConnect(const TcpConnectionPtr &conn)$/;"	f	class:EchoServer	file:	access:private	signature:(const TcpConnectionPtr &conn)
+EchoServer::onMessage	test_echo_server.cpp	/^        void onMessage(const TcpConnectionPtr &conn)$/;"	f	class:EchoServer	file:	access:private	signature:(const TcpConnectionPtr &conn)
+EchoServer::server_	test_echo_server.cpp	/^        TcpServer server_;$/;"	m	class:EchoServer	file:	access:private
+EchoServer::start	test_echo_server.cpp	/^        void start()$/;"	f	class:EchoServer	access:public	signature:()
+INET_ADDRESS_H	InetAddress.h	2;"	d
+InetAddress	InetAddress.cpp	/^InetAddress::InetAddress(const struct sockaddr_in &addr)$/;"	f	class:InetAddress	signature:(const struct sockaddr_in &addr)
+InetAddress	InetAddress.cpp	/^InetAddress::InetAddress(uint16_t port)$/;"	f	class:InetAddress	signature:(uint16_t port)
+InetAddress	InetAddress.h	/^        InetAddress(const struct sockaddr_in &addr);$/;"	p	class:InetAddress	access:public	signature:(const struct sockaddr_in &addr)
+InetAddress	InetAddress.h	/^        explicit InetAddress(uint16_t port);$/;"	p	class:InetAddress	access:public	signature:(uint16_t port)
+InetAddress	InetAddress.h	/^class InetAddress : private Copyable$/;"	c	inherits:Copyable
+InetAddress::InetAddress	InetAddress.cpp	/^InetAddress::InetAddress(const struct sockaddr_in &addr)$/;"	f	class:InetAddress	signature:(const struct sockaddr_in &addr)
+InetAddress::InetAddress	InetAddress.cpp	/^InetAddress::InetAddress(uint16_t port)$/;"	f	class:InetAddress	signature:(uint16_t port)
+InetAddress::InetAddress	InetAddress.h	/^        InetAddress(const struct sockaddr_in &addr);$/;"	p	class:InetAddress	access:public	signature:(const struct sockaddr_in &addr)
+InetAddress::InetAddress	InetAddress.h	/^        explicit InetAddress(uint16_t port);$/;"	p	class:InetAddress	access:public	signature:(uint16_t port)
+InetAddress::addr_	InetAddress.h	/^        struct sockaddr_in addr_;$/;"	m	class:InetAddress	typeref:struct:InetAddress::sockaddr_in	access:private
+InetAddress::getLocalAddress	InetAddress.cpp	/^InetAddress InetAddress::getLocalAddress(int sockfd)$/;"	f	class:InetAddress	signature:(int sockfd)
+InetAddress::getLocalAddress	InetAddress.h	/^        static InetAddress getLocalAddress(int sockfd);$/;"	p	class:InetAddress	access:public	signature:(int sockfd)
+InetAddress::getPeerAddress	InetAddress.cpp	/^InetAddress InetAddress::getPeerAddress(int sockfd)$/;"	f	class:InetAddress	signature:(int sockfd)
+InetAddress::getPeerAddress	InetAddress.h	/^        static InetAddress getPeerAddress(int sockfd);$/;"	p	class:InetAddress	access:public	signature:(int sockfd)
+InetAddress::getSockAddrInet	InetAddress.h	/^        const struct sockaddr_in *getSockAddrInet() const$/;"	f	class:InetAddress	access:public	signature:() const
+InetAddress::ipNetEndian	InetAddress.h	/^        uint32_t ipNetEndian() const$/;"	f	class:InetAddress	access:public	signature:() const
+InetAddress::portNetEndian	InetAddress.h	/^        uint16_t portNetEndian() const$/;"	f	class:InetAddress	access:public	signature:() const
+InetAddress::setSockAddrInet	InetAddress.h	/^        void setSockAddrInet(const struct sockaddr_in &addr)$/;"	f	class:InetAddress	access:public	signature:(const struct sockaddr_in &addr)
+InetAddress::toIp	InetAddress.cpp	/^std::string InetAddress::toIp() const$/;"	f	class:InetAddress	signature:() const
+InetAddress::toIp	InetAddress.h	/^        std::string toIp() const;$/;"	p	class:InetAddress	access:public	signature:() const
+InetAddress::toPort	InetAddress.cpp	/^uint16_t InetAddress::toPort() const$/;"	f	class:InetAddress	signature:() const
+InetAddress::toPort	InetAddress.h	/^        uint16_t toPort() const;$/;"	p	class:InetAddress	access:public	signature:() const
+LINKS	Makefile	/^LINKS=-lpthread$/;"	m
+MAXLINE	Rio.h	6;"	d
+MUTEXLOCK_H	MutexLock.h	2;"	d
+MutexLock	MutexLock.h	/^        MutexLock();$/;"	p	class:MutexLock	access:public	signature:()
+MutexLock	MutexLock.h	/^class MutexLock : NonCopyable$/;"	c	inherits:NonCopyable
+MutexLock	MutexLock.h	/^inline MutexLock::MutexLock()$/;"	f	class:MutexLock	signature:()
+MutexLock::MutexLock	MutexLock.h	/^        MutexLock();$/;"	p	class:MutexLock	access:public	signature:()
+MutexLock::MutexLock	MutexLock.h	/^inline MutexLock::MutexLock()$/;"	f	class:MutexLock	signature:()
+MutexLock::getMutexPtr	MutexLock.h	/^        pthread_mutex_t *getMutexPtr() { return &mutex_;}  $/;"	f	class:MutexLock	access:public	signature:()
+MutexLock::isLocked	MutexLock.h	/^        bool isLocked() const { return isLocked_; }$/;"	f	class:MutexLock	access:public	signature:() const
+MutexLock::isLocked_	MutexLock.h	/^        bool isLocked_;$/;"	m	class:MutexLock	access:private
+MutexLock::lock	MutexLock.h	/^        void lock();$/;"	p	class:MutexLock	access:private	signature:()
+MutexLock::lock	MutexLock.h	/^inline void MutexLock::lock()$/;"	f	class:MutexLock	signature:()
+MutexLock::mutex_	MutexLock.h	/^        pthread_mutex_t mutex_;$/;"	m	class:MutexLock	access:private
+MutexLock::unlock	MutexLock.h	/^        void unlock();$/;"	p	class:MutexLock	access:private	signature:()
+MutexLock::unlock	MutexLock.h	/^inline void MutexLock::unlock()$/;"	f	class:MutexLock	signature:()
+MutexLock::~MutexLock	MutexLock.h	/^        ~MutexLock();$/;"	p	class:MutexLock	access:public	signature:()
+MutexLock::~MutexLock	MutexLock.h	/^inline MutexLock::~MutexLock()$/;"	f	class:MutexLock	signature:()
+MutexLockGuard	MutexLock.h	/^        MutexLockGuard(MutexLock &mutex);$/;"	p	class:MutexLockGuard	access:public	signature:(MutexLock &mutex)
+MutexLockGuard	MutexLock.h	/^class MutexLockGuard$/;"	c
+MutexLockGuard	MutexLock.h	/^inline MutexLockGuard::MutexLockGuard(MutexLock &mutex)$/;"	f	class:MutexLockGuard	signature:(MutexLock &mutex)
+MutexLockGuard	MutexLock.h	76;"	d
+MutexLockGuard::MutexLockGuard	MutexLock.h	/^        MutexLockGuard(MutexLock &mutex);$/;"	p	class:MutexLockGuard	access:public	signature:(MutexLock &mutex)
+MutexLockGuard::MutexLockGuard	MutexLock.h	/^inline MutexLockGuard::MutexLockGuard(MutexLock &mutex)$/;"	f	class:MutexLockGuard	signature:(MutexLock &mutex)
+MutexLockGuard::mutex_	MutexLock.h	/^        MutexLock &mutex_;$/;"	m	class:MutexLockGuard	access:private
+MutexLockGuard::~MutexLockGuard	MutexLock.h	/^        ~MutexLockGuard();$/;"	p	class:MutexLockGuard	access:public	signature:()
+MutexLockGuard::~MutexLockGuard	MutexLock.h	/^inline MutexLockGuard::~MutexLockGuard()$/;"	f	class:MutexLockGuard	signature:()
+NONCOPYABLE_H_	NonCopyable.h	2;"	d
+NonCopyable	NonCopyable.h	/^        NonCopyable() {}$/;"	f	class:NonCopyable	access:public	signature:()
+NonCopyable	NonCopyable.h	/^        NonCopyable(const NonCopyable &);$/;"	p	class:NonCopyable	access:private	signature:(const NonCopyable &)
+NonCopyable	NonCopyable.h	/^class NonCopyable$/;"	c
+NonCopyable::NonCopyable	NonCopyable.h	/^        NonCopyable() {}$/;"	f	class:NonCopyable	access:public	signature:()
+NonCopyable::NonCopyable	NonCopyable.h	/^        NonCopyable(const NonCopyable &);$/;"	p	class:NonCopyable	access:private	signature:(const NonCopyable &)
+NonCopyable::operator =	NonCopyable.h	/^        void operator=(const NonCopyable &);$/;"	p	class:NonCopyable	access:private	signature:(const NonCopyable &)
+NonCopyable::~NonCopyable	NonCopyable.h	/^        ~NonCopyable() {}$/;"	f	class:NonCopyable	access:public	signature:()
+OBJS	Makefile	/^OBJS=Socket.o Rio.o TcpConnection.o PollPoller.o test_echo_server.o InetAddress.o TcpServer.o$/;"	m
+POLL_POLLER_H	PollPoller.h	2;"	d
+PollPoller	PollPoller.cpp	/^PollPoller::PollPoller(int listenfd)$/;"	f	class:PollPoller	signature:(int listenfd)
+PollPoller	PollPoller.h	/^        explicit PollPoller(int listenfd);$/;"	p	class:PollPoller	access:public	signature:(int listenfd)
+PollPoller	PollPoller.h	/^class PollPoller : private NonCopyable$/;"	c	inherits:NonCopyable
+PollPoller::PollPoller	PollPoller.cpp	/^PollPoller::PollPoller(int listenfd)$/;"	f	class:PollPoller	signature:(int listenfd)
+PollPoller::PollPoller	PollPoller.h	/^        explicit PollPoller(int listenfd);$/;"	p	class:PollPoller	access:public	signature:(int listenfd)
+PollPoller::PollerCallback	PollPoller.h	/^        typedef TcpConnection::TcpConnectionCallback PollerCallback;$/;"	t	class:PollPoller	access:public
+PollPoller::TcpIterator	PollPoller.h	/^        typedef std::map<int, TcpConnectionPtr>::iterator TcpIterator;$/;"	t	class:PollPoller	access:private
+PollPoller::event_	PollPoller.h	/^        struct pollfd event_[2048];$/;"	m	class:PollPoller	typeref:struct:PollPoller::pollfd	access:private
+PollPoller::handleAccept	PollPoller.cpp	/^void PollPoller::handleAccept()$/;"	f	class:PollPoller	signature:()
+PollPoller::handleAccept	PollPoller.h	/^        void handleAccept();$/;"	p	class:PollPoller	access:public	signature:()
+PollPoller::handleCloseEvent	PollPoller.cpp	/^void PollPoller::handleCloseEvent(int i)$/;"	f	class:PollPoller	signature:(int i)
+PollPoller::handleCloseEvent	PollPoller.h	/^        void handleCloseEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
+PollPoller::handleConnectionEvent	PollPoller.cpp	/^void PollPoller::handleConnectionEvent(int peerfd)$/;"	f	class:PollPoller	signature:(int peerfd)
+PollPoller::handleConnectionEvent	PollPoller.h	/^        void handleConnectionEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
+PollPoller::handleData	PollPoller.cpp	/^void PollPoller::handleData()$/;"	f	class:PollPoller	signature:()
+PollPoller::handleData	PollPoller.h	/^        void handleData();$/;"	p	class:PollPoller	access:public	signature:()
+PollPoller::handleMessageEvent	PollPoller.cpp	/^void PollPoller::handleMessageEvent(int peerfd)$/;"	f	class:PollPoller	signature:(int peerfd)
+PollPoller::handleMessageEvent	PollPoller.h	/^        void handleMessageEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
+PollPoller::kPoolQueueSize	PollPoller.h	/^        static size_t kPoolQueueSize;$/;"	m	class:PollPoller	access:private
+PollPoller::kPoolThreadSize	PollPoller.cpp	/^size_t PollPoller::kPoolThreadSize = 4;$/;"	m	class:PollPoller	file:
+PollPoller::kPoolThreadSize	PollPoller.h	/^        static size_t kPoolThreadSize;$/;"	m	class:PollPoller	access:private
+PollPoller::listenfd_	PollPoller.h	/^        int listenfd_;$/;"	m	class:PollPoller	access:private
+PollPoller::lists_	PollPoller.h	/^        std::map<int, TcpConnectionPtr> lists_; \/\/从fd到TcpConnection的映射$/;"	m	class:PollPoller	access:private
+PollPoller::maxi_	PollPoller.h	/^        int maxi_;$/;"	m	class:PollPoller	access:private
+PollPoller::nready_	PollPoller.h	/^        int nready_;$/;"	m	class:PollPoller	access:private
+PollPoller::onCloseCallback_	PollPoller.h	/^        PollerCallback onCloseCallback_;$/;"	m	class:PollPoller	access:private
+PollPoller::onConnectionCallback_	PollPoller.h	/^        PollerCallback onConnectionCallback_;$/;"	m	class:PollPoller	access:private
+PollPoller::onMessageCallback_	PollPoller.h	/^        PollerCallback onMessageCallback_;$/;"	m	class:PollPoller	access:private
+PollPoller::poll	PollPoller.cpp	/^void PollPoller::poll()$/;"	f	class:PollPoller	signature:()
+PollPoller::poll	PollPoller.h	/^        void poll();$/;"	p	class:PollPoller	access:public	signature:()
+PollPoller::processClose	PollPoller.h	/^        void processClose(const TcpConnectionPtr &conn)$/;"	f	class:PollPoller	access:public	signature:(const TcpConnectionPtr &conn)
+PollPoller::processConnect	PollPoller.h	/^        void processConnect(const TcpConnectionPtr &conn)$/;"	f	class:PollPoller	access:public	signature:(const TcpConnectionPtr &conn)
+PollPoller::processMessage	PollPoller.h	/^        void processMessage(const TcpConnectionPtr &conn)$/;"	f	class:PollPoller	access:public	signature:(const TcpConnectionPtr &conn)
+PollPoller::setCloseCallback	PollPoller.h	/^        void setCloseCallback(const PollerCallback &cb)$/;"	f	class:PollPoller	access:public	signature:(const PollerCallback &cb)
+PollPoller::setConnectionCallback	PollPoller.h	/^        void setConnectionCallback(const PollerCallback &cb)$/;"	f	class:PollPoller	access:public	signature:(const PollerCallback &cb)
+PollPoller::setMessageCallback	PollPoller.h	/^        void setMessageCallback(const PollerCallback &cb)$/;"	f	class:PollPoller	access:public	signature:(const PollerCallback &cb)
+PollPoller::~PollPoller	PollPoller.cpp	/^PollPoller::~PollPoller()$/;"	f	class:PollPoller	signature:()
+PollPoller::~PollPoller	PollPoller.h	/^        ~PollPoller();$/;"	p	class:PollPoller	access:public	signature:()
+PollerCallback	PollPoller.h	/^        typedef TcpConnection::TcpConnectionCallback PollerCallback;$/;"	t	class:PollPoller	access:public
+RIO_BUFFER	Rio.h	7;"	d
+RIO_H	Rio.h	2;"	d
+Rio	Rio.cpp	/^Rio::Rio(int fd)$/;"	f	class:Rio	signature:(int fd)
+Rio	Rio.h	/^        explicit Rio(int fd);        $/;"	p	class:Rio	access:public	signature:(int fd)
+Rio	Rio.h	/^class Rio : NonCopyable$/;"	c	inherits:NonCopyable
+Rio::Rio	Rio.cpp	/^Rio::Rio(int fd)$/;"	f	class:Rio	signature:(int fd)
+Rio::Rio	Rio.h	/^        explicit Rio(int fd);        $/;"	p	class:Rio	access:public	signature:(int fd)
+Rio::buffer_	Rio.h	/^        char buffer_[RIO_BUFFER];$/;"	m	class:Rio	access:private
+Rio::bufptr_	Rio.h	/^        char *bufptr_;$/;"	m	class:Rio	access:private
+Rio::fd_	Rio.h	/^        int fd_;$/;"	m	class:Rio	access:private
+Rio::left_	Rio.h	/^        int left_;$/;"	m	class:Rio	access:private
+Rio::read	Rio.cpp	/^ssize_t Rio::read(char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(char *usrbuf, size_t n)
+Rio::read	Rio.h	/^        ssize_t read(char *usrbuf, size_t n);$/;"	p	class:Rio	access:private	signature:(char *usrbuf, size_t n)
+Rio::readline	Rio.cpp	/^ssize_t Rio::readline(char *usrbuf, size_t maxlen)$/;"	f	class:Rio	signature:(char *usrbuf, size_t maxlen)
+Rio::readline	Rio.h	/^        ssize_t readline(char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(char *usrbuf, size_t n)
+Rio::readn	Rio.cpp	/^ssize_t Rio::readn(char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(char *usrbuf, size_t n)
+Rio::readn	Rio.h	/^        ssize_t readn(char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(char *usrbuf, size_t n)
+Rio::writen	Rio.cpp	/^ssize_t Rio::writen(const char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(const char *usrbuf, size_t n)
+Rio::writen	Rio.h	/^        ssize_t writen(const char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(const char *usrbuf, size_t n)
+SA	InetAddress.h	/^typedef struct sockaddr SA;$/;"	t	typeref:struct:sockaddr
+SOCKET_H	Socket.h	2;"	d
+STARD	Makefile	/^STARD=-std=c++0x$/;"	m
+Socket	Socket.cpp	/^Socket::Socket(int sockfd)$/;"	f	class:Socket	signature:(int sockfd)
+Socket	Socket.h	/^        explicit Socket(int sockfd);$/;"	p	class:Socket	access:public	signature:(int sockfd)
+Socket	Socket.h	/^class Socket : private NonCopyable$/;"	c	inherits:NonCopyable
+Socket::Socket	Socket.cpp	/^Socket::Socket(int sockfd)$/;"	f	class:Socket	signature:(int sockfd)
+Socket::Socket	Socket.h	/^        explicit Socket(int sockfd);$/;"	p	class:Socket	access:public	signature:(int sockfd)
+Socket::accept	Socket.cpp	/^int Socket::accept()$/;"	f	class:Socket	signature:()
+Socket::accept	Socket.h	/^        int accept();$/;"	p	class:Socket	access:public	signature:()
+Socket::bindAddress	Socket.cpp	/^void Socket::bindAddress(const InetAddress &addr)$/;"	f	class:Socket	signature:(const InetAddress &addr)
+Socket::bindAddress	Socket.h	/^        void bindAddress(const InetAddress &addr);$/;"	p	class:Socket	access:public	signature:(const InetAddress &addr)
+Socket::fd	Socket.h	/^        int fd() const$/;"	f	class:Socket	access:public	signature:() const
+Socket::listen	Socket.cpp	/^void Socket::listen()$/;"	f	class:Socket	signature:()
+Socket::listen	Socket.h	/^        void listen();$/;"	p	class:Socket	access:public	signature:()
+Socket::setReusePort	Socket.cpp	/^void Socket::setReusePort()$/;"	f	class:Socket	signature:()
+Socket::setReusePort	Socket.h	/^        void setReusePort();$/;"	p	class:Socket	access:public	signature:()
+Socket::shutdownWrite	Socket.cpp	/^void Socket::shutdownWrite()$/;"	f	class:Socket	signature:()
+Socket::shutdownWrite	Socket.h	/^        void shutdownWrite();   $/;"	p	class:Socket	access:public	signature:()
+Socket::sockfd_	Socket.h	/^        const int sockfd_;$/;"	m	class:Socket	access:private
+Socket::~Socket	Socket.cpp	/^Socket::~Socket()$/;"	f	class:Socket	signature:()
+Socket::~Socket	Socket.h	/^        ~Socket();$/;"	p	class:Socket	access:public	signature:()
+TCP_CONNECTION_H	TcpConnection.h	2;"	d
+TCP_SERVER_H	TcpServer.h	2;"	d
+THREAD_H_	Thread.h	2;"	d
+THREAD_POOL_H	ThreadPool.h	2;"	d
+Task	ThreadPool.h	/^        typedef std::function<void()> Task;$/;"	t	class:ThreadPool	access:public
+TcpCallback	TcpServer.h	/^        typedef TcpConnection::TcpConnectionCallback TcpCallback;$/;"	t	class:TcpServer	access:public
+TcpConnection	TcpConnection.cpp	/^TcpConnection::TcpConnection(int sockfd,$/;"	f	class:TcpConnection	signature:(int sockfd, const InetAddress &localAddr, const InetAddress &peerAddr)
+TcpConnection	TcpConnection.h	/^        TcpConnection(int sockfd,$/;"	p	class:TcpConnection	access:public	signature:(int sockfd, const InetAddress &localAddr, const InetAddress &peerAddr)
+TcpConnection	TcpConnection.h	/^class TcpConnection : private NonCopyable,$/;"	c	inherits:NonCopyable,std::enable_shared_from_this
+TcpConnection::TcpConnection	TcpConnection.cpp	/^TcpConnection::TcpConnection(int sockfd,$/;"	f	class:TcpConnection	signature:(int sockfd, const InetAddress &localAddr, const InetAddress &peerAddr)
+TcpConnection::TcpConnection	TcpConnection.h	/^        TcpConnection(int sockfd,$/;"	p	class:TcpConnection	access:public	signature:(int sockfd, const InetAddress &localAddr, const InetAddress &peerAddr)
+TcpConnection::TcpConnectionCallback	TcpConnection.h	/^        typedef std::function<void(const TcpConnectionPtr &)> TcpConnectionCallback;$/;"	t	class:TcpConnection	access:public
+TcpConnection::buffer_	TcpConnection.h	/^        Rio buffer_;     \/\/该连接的读写缓冲区$/;"	m	class:TcpConnection	access:private
+TcpConnection::fd	TcpConnection.h	/^        int fd() const$/;"	f	class:TcpConnection	access:public	signature:() const
+TcpConnection::getLocalAddr	TcpConnection.h	/^        const InetAddress &getLocalAddr() const$/;"	f	class:TcpConnection	access:public	signature:() const
+TcpConnection::getPeerAddr	TcpConnection.h	/^        const InetAddress &getPeerAddr() const$/;"	f	class:TcpConnection	access:public	signature:() const
+TcpConnection::handleClose	TcpConnection.cpp	/^void TcpConnection::handleClose()$/;"	f	class:TcpConnection	signature:()
+TcpConnection::handleClose	TcpConnection.h	/^        void handleClose();$/;"	p	class:TcpConnection	access:public	signature:()
+TcpConnection::handleConnection	TcpConnection.cpp	/^void TcpConnection::handleConnection()$/;"	f	class:TcpConnection	signature:()
+TcpConnection::handleConnection	TcpConnection.h	/^        void handleConnection();$/;"	p	class:TcpConnection	access:public	signature:()
+TcpConnection::handleMessage	TcpConnection.cpp	/^void TcpConnection::handleMessage()$/;"	f	class:TcpConnection	signature:()
+TcpConnection::handleMessage	TcpConnection.h	/^        void handleMessage();$/;"	p	class:TcpConnection	access:public	signature:()
+TcpConnection::localAddr_	TcpConnection.h	/^        const InetAddress localAddr_;  \/\/Local$/;"	m	class:TcpConnection	access:private
+TcpConnection::onCloseCallback_	TcpConnection.h	/^        TcpConnectionCallback onCloseCallback_;  \/\/连接关闭$/;"	m	class:TcpConnection	access:private
+TcpConnection::onConnectionCallback_	TcpConnection.h	/^        TcpConnectionCallback onConnectionCallback_; \/\/连接建立时的回调$/;"	m	class:TcpConnection	access:private
+TcpConnection::onMessageCallback_	TcpConnection.h	/^        TcpConnectionCallback onMessageCallback_;  \/\/消息到达$/;"	m	class:TcpConnection	access:private
+TcpConnection::peerAddr_	TcpConnection.h	/^        const InetAddress peerAddr_;   \/\/Peer    $/;"	m	class:TcpConnection	access:private
+TcpConnection::readLine	TcpConnection.cpp	/^ssize_t TcpConnection::readLine(char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(char *usrbuf, size_t n)
+TcpConnection::readLine	TcpConnection.h	/^        ssize_t readLine(char *usrbuf, size_t maxline);$/;"	p	class:TcpConnection	access:public	signature:(char *usrbuf, size_t maxline)
+TcpConnection::readn	TcpConnection.cpp	/^ssize_t TcpConnection::readn(char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(char *usrbuf, size_t n)
+TcpConnection::readn	TcpConnection.h	/^        ssize_t readn(char *usrbuf, size_t n);$/;"	p	class:TcpConnection	access:public	signature:(char *usrbuf, size_t n)
+TcpConnection::receive	TcpConnection.cpp	/^std::string TcpConnection::receive()$/;"	f	class:TcpConnection	signature:()
+TcpConnection::receive	TcpConnection.h	/^        std::string receive();$/;"	p	class:TcpConnection	access:public	signature:()
+TcpConnection::send	TcpConnection.cpp	/^void TcpConnection::send(const std::string &s)$/;"	f	class:TcpConnection	signature:(const std::string &s)
+TcpConnection::send	TcpConnection.h	/^        void send(const std::string &s);$/;"	p	class:TcpConnection	access:public	signature:(const std::string &s)
+TcpConnection::setCloseCallback	TcpConnection.h	/^        void setCloseCallback(const TcpConnectionCallback &cb)$/;"	f	class:TcpConnection	access:public	signature:(const TcpConnectionCallback &cb)
+TcpConnection::setConnectionCallback	TcpConnection.h	/^        void setConnectionCallback(const TcpConnectionCallback &cb)$/;"	f	class:TcpConnection	access:public	signature:(const TcpConnectionCallback &cb)
+TcpConnection::setMessageCallback	TcpConnection.h	/^        void setMessageCallback(const TcpConnectionCallback &cb)$/;"	f	class:TcpConnection	access:public	signature:(const TcpConnectionCallback &cb)
+TcpConnection::shutdown	TcpConnection.cpp	/^void TcpConnection::shutdown()$/;"	f	class:TcpConnection	signature:()
+TcpConnection::shutdown	TcpConnection.h	/^        void shutdown();$/;"	p	class:TcpConnection	access:public	signature:()
+TcpConnection::sockfd_	TcpConnection.h	/^        Socket sockfd_;  \/\/fd$/;"	m	class:TcpConnection	access:private
+TcpConnection::writen	TcpConnection.cpp	/^ssize_t TcpConnection::writen(const char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(const char *usrbuf, size_t n)
+TcpConnection::writen	TcpConnection.h	/^        ssize_t writen(const char *usrbuf, size_t n);$/;"	p	class:TcpConnection	access:public	signature:(const char *usrbuf, size_t n)
+TcpConnection::~TcpConnection	TcpConnection.cpp	/^TcpConnection::~TcpConnection()$/;"	f	class:TcpConnection	signature:()
+TcpConnection::~TcpConnection	TcpConnection.h	/^        ~TcpConnection();$/;"	p	class:TcpConnection	access:public	signature:()
+TcpConnectionCallback	TcpConnection.h	/^        typedef std::function<void(const TcpConnectionPtr &)> TcpConnectionCallback;$/;"	t	class:TcpConnection	access:public
+TcpConnectionPtr	TcpConnection.h	/^typedef std::shared_ptr<TcpConnection> TcpConnectionPtr;$/;"	t
+TcpIterator	PollPoller.h	/^        typedef std::map<int, TcpConnectionPtr>::iterator TcpIterator;$/;"	t	class:PollPoller	access:private
+TcpServer	TcpServer.cpp	/^TcpServer::TcpServer(const InetAddress &addr, int qs, int ths)$/;"	f	class:TcpServer	signature:(const InetAddress &addr, int qs, int ths)
+TcpServer	TcpServer.h	/^        explicit TcpServer(const InetAddress &addr, int qs, int ths);$/;"	p	class:TcpServer	access:public	signature:(const InetAddress &addr, int qs, int ths)
+TcpServer	TcpServer.h	/^class TcpServer : private NonCopyable$/;"	c	inherits:NonCopyable
+TcpServer::TcpCallback	TcpServer.h	/^        typedef TcpConnection::TcpConnectionCallback TcpCallback;$/;"	t	class:TcpServer	access:public
+TcpServer::TcpServer	TcpServer.cpp	/^TcpServer::TcpServer(const InetAddress &addr, int qs, int ths)$/;"	f	class:TcpServer	signature:(const InetAddress &addr, int qs, int ths)
+TcpServer::TcpServer	TcpServer.h	/^        explicit TcpServer(const InetAddress &addr, int qs, int ths);$/;"	p	class:TcpServer	access:public	signature:(const InetAddress &addr, int qs, int ths)
+TcpServer::onClose_	TcpServer.h	/^        TcpCallback onClose_;$/;"	m	class:TcpServer	access:private
+TcpServer::onConnect_	TcpServer.h	/^        TcpCallback onConnect_;$/;"	m	class:TcpServer	access:private
+TcpServer::onMessage_	TcpServer.h	/^        TcpCallback onMessage_;$/;"	m	class:TcpServer	access:private
+TcpServer::poller_	TcpServer.h	/^        std::unique_ptr<PollPoller> poller_;$/;"	m	class:TcpServer	access:private
+TcpServer::setClose	TcpServer.h	/^        void setClose(const TcpCallback &cb)$/;"	f	class:TcpServer	access:public	signature:(const TcpCallback &cb)
+TcpServer::setConnection	TcpServer.h	/^        void setConnection(const TcpCallback &cb)$/;"	f	class:TcpServer	access:public	signature:(const TcpCallback &cb)
+TcpServer::setMessage	TcpServer.h	/^        void setMessage(const TcpCallback &cb)$/;"	f	class:TcpServer	access:public	signature:(const TcpCallback &cb)
+TcpServer::sock_	TcpServer.h	/^        std::unique_ptr<Socket> sock_;$/;"	m	class:TcpServer	access:private
+TcpServer::start	TcpServer.cpp	/^void TcpServer::start()$/;"	f	class:TcpServer	signature:()
+TcpServer::start	TcpServer.h	/^        void start();$/;"	p	class:TcpServer	access:public	signature:()
+TcpServer::threadp_	TcpServer.h	/^		std::unique_ptr<ThreadPoll> threadp_;$/;"	m	class:TcpServer	access:private
+Thread	Thread.cpp	/^Thread::Thread(ThreadFunc callback)$/;"	f	class:Thread	signature:(ThreadFunc callback)
+Thread	Thread.h	/^        Thread(ThreadFunc callback);$/;"	p	class:Thread	access:public	signature:(ThreadFunc callback)
+Thread	Thread.h	/^class Thread : private NonCopyable$/;"	c	inherits:NonCopyable
+Thread::Thread	Thread.cpp	/^Thread::Thread(ThreadFunc callback)$/;"	f	class:Thread	signature:(ThreadFunc callback)
+Thread::Thread	Thread.h	/^        Thread(ThreadFunc callback);$/;"	p	class:Thread	access:public	signature:(ThreadFunc callback)
+Thread::ThreadFunc	Thread.h	/^        typedef std::function<void ()> ThreadFunc;$/;"	t	class:Thread	access:public
+Thread::callback_	Thread.h	/^        ThreadFunc callback_;$/;"	m	class:Thread	access:private
+Thread::isStarted_	Thread.h	/^        bool isStarted_;$/;"	m	class:Thread	access:private
+Thread::join	Thread.cpp	/^void Thread::join()$/;"	f	class:Thread	signature:()
+Thread::join	Thread.h	/^        void join();$/;"	p	class:Thread	access:public	signature:()
+Thread::start	Thread.cpp	/^void Thread::start()$/;"	f	class:Thread	signature:()
+Thread::start	Thread.h	/^        void start();$/;"	p	class:Thread	access:public	signature:()
+Thread::threadFunc	Thread.cpp	/^void *Thread::threadFunc(void *arg)$/;"	f	class:Thread	signature:(void *arg)
+Thread::threadFunc	Thread.h	/^        static void *threadFunc(void *);$/;"	p	class:Thread	access:private	signature:(void *)
+Thread::tid_	Thread.h	/^        pthread_t tid_;$/;"	m	class:Thread	access:private
+Thread::~Thread	Thread.cpp	/^Thread::~Thread()$/;"	f	class:Thread	signature:()
+Thread::~Thread	Thread.h	/^        ~Thread();$/;"	p	class:Thread	access:public	signature:()
+ThreadFunc	Thread.h	/^        typedef std::function<void ()> ThreadFunc;$/;"	t	class:Thread	access:public
+ThreadPool	ThreadPool.cpp	/^ThreadPool::ThreadPool(size_t queueSize, size_t poolSize)$/;"	f	class:ThreadPool	signature:(size_t queueSize, size_t poolSize)
+ThreadPool	ThreadPool.h	/^        ThreadPool(size_t queueSize, size_t poolSize);$/;"	p	class:ThreadPool	access:public	signature:(size_t queueSize, size_t poolSize)
+ThreadPool	ThreadPool.h	/^class ThreadPool : private NonCopyable$/;"	c	inherits:NonCopyable
+ThreadPool::Task	ThreadPool.h	/^        typedef std::function<void()> Task;$/;"	t	class:ThreadPool	access:public
+ThreadPool::ThreadPool	ThreadPool.cpp	/^ThreadPool::ThreadPool(size_t queueSize, size_t poolSize)$/;"	f	class:ThreadPool	signature:(size_t queueSize, size_t poolSize)
+ThreadPool::ThreadPool	ThreadPool.h	/^        ThreadPool(size_t queueSize, size_t poolSize);$/;"	p	class:ThreadPool	access:public	signature:(size_t queueSize, size_t poolSize)
+ThreadPool::addTask	ThreadPool.cpp	/^void ThreadPool::addTask(const Task &task)$/;"	f	class:ThreadPool	signature:(const Task &task)
+ThreadPool::addTask	ThreadPool.h	/^        void addTask(const Task &);$/;"	p	class:ThreadPool	access:public	signature:(const Task &)
+ThreadPool::empty_	ThreadPool.h	/^        Condition empty_;  $/;"	m	class:ThreadPool	access:private
+ThreadPool::full_	ThreadPool.h	/^        Condition full_;$/;"	m	class:ThreadPool	access:private
+ThreadPool::getTask	ThreadPool.cpp	/^ThreadPool::Task ThreadPool::getTask()$/;"	f	class:ThreadPool	signature:()
+ThreadPool::getTask	ThreadPool.h	/^        Task getTask();$/;"	p	class:ThreadPool	access:public	signature:()
+ThreadPool::isStarted_	ThreadPool.h	/^        bool isStarted_;  \/\/线程池是否开启$/;"	m	class:ThreadPool	access:private
+ThreadPool::mutex_	ThreadPool.h	/^        mutable MutexLock mutex_;$/;"	m	class:ThreadPool	access:private
+ThreadPool::poolSize_	ThreadPool.h	/^        size_t poolSize_;  \/\/线程池的大小$/;"	m	class:ThreadPool	access:private
+ThreadPool::queueSize_	ThreadPool.h	/^        size_t queueSize_;  \/\/队列大小$/;"	m	class:ThreadPool	access:private
+ThreadPool::queue_	ThreadPool.h	/^        std::queue<Task> queue_;$/;"	m	class:ThreadPool	access:private
+ThreadPool::runInThread	ThreadPool.cpp	/^void ThreadPool::runInThread()$/;"	f	class:ThreadPool	signature:()
+ThreadPool::runInThread	ThreadPool.h	/^        void runInThread();  \/\/线程池内线程的回调函数$/;"	p	class:ThreadPool	access:private	signature:()
+ThreadPool::start	ThreadPool.cpp	/^void ThreadPool::start()$/;"	f	class:ThreadPool	signature:()
+ThreadPool::start	ThreadPool.h	/^        void start(); \/\/启动线程池new$/;"	p	class:ThreadPool	access:public	signature:()
+ThreadPool::stop	ThreadPool.cpp	/^void ThreadPool::stop()$/;"	f	class:ThreadPool	signature:()
+ThreadPool::stop	ThreadPool.h	/^        void stop();  \/\/停止线程池$/;"	p	class:ThreadPool	access:public	signature:()
+ThreadPool::threads_	ThreadPool.h	/^		std::vector<std::shared_ptr<Thread>> threads_;\/\/new$/;"	m	class:ThreadPool	access:private
+ThreadPool::~ThreadPool	ThreadPool.cpp	/^ThreadPool::~ThreadPool()$/;"	f	class:ThreadPool	signature:()
+ThreadPool::~ThreadPool	ThreadPool.h	/^        ~ThreadPool();$/;"	p	class:ThreadPool	access:public	signature:()
+accept	Socket.cpp	/^int Socket::accept()$/;"	f	class:Socket	signature:()
+accept	Socket.h	/^        int accept();$/;"	p	class:Socket	access:public	signature:()
+addTask	ThreadPool.cpp	/^void ThreadPool::addTask(const Task &task)$/;"	f	class:ThreadPool	signature:(const Task &task)
+addTask	ThreadPool.h	/^        void addTask(const Task &);$/;"	p	class:ThreadPool	access:public	signature:(const Task &)
+addr_	InetAddress.h	/^        struct sockaddr_in addr_;$/;"	m	class:InetAddress	typeref:struct:InetAddress::sockaddr_in	access:private
+bindAddress	Socket.cpp	/^void Socket::bindAddress(const InetAddress &addr)$/;"	f	class:Socket	signature:(const InetAddress &addr)
+bindAddress	Socket.h	/^        void bindAddress(const InetAddress &addr);$/;"	p	class:Socket	access:public	signature:(const InetAddress &addr)
+buffer_	Rio.h	/^        char buffer_[RIO_BUFFER];$/;"	m	class:Rio	access:private
+buffer_	TcpConnection.h	/^        Rio buffer_;     \/\/该连接的读写缓冲区$/;"	m	class:TcpConnection	access:private
+bufptr_	Rio.h	/^        char *bufptr_;$/;"	m	class:Rio	access:private
+callback_	Thread.h	/^        ThreadFunc callback_;$/;"	m	class:Thread	access:private
+cond_	Condition.h	/^        pthread_cond_t cond_;$/;"	m	class:Condition	access:private
+empty_	ThreadPool.h	/^        Condition empty_;  $/;"	m	class:ThreadPool	access:private
+event_	PollPoller.h	/^        struct pollfd event_[2048];$/;"	m	class:PollPoller	typeref:struct:PollPoller::pollfd	access:private
+fd	Socket.h	/^        int fd() const$/;"	f	class:Socket	access:public	signature:() const
+fd	TcpConnection.h	/^        int fd() const$/;"	f	class:TcpConnection	access:public	signature:() const
+fd_	Rio.h	/^        int fd_;$/;"	m	class:Rio	access:private
+full_	ThreadPool.h	/^        Condition full_;$/;"	m	class:ThreadPool	access:private
+getLocalAddr	TcpConnection.h	/^        const InetAddress &getLocalAddr() const$/;"	f	class:TcpConnection	access:public	signature:() const
+getLocalAddress	InetAddress.cpp	/^InetAddress InetAddress::getLocalAddress(int sockfd)$/;"	f	class:InetAddress	signature:(int sockfd)
+getLocalAddress	InetAddress.h	/^        static InetAddress getLocalAddress(int sockfd);$/;"	p	class:InetAddress	access:public	signature:(int sockfd)
+getMutexPtr	MutexLock.h	/^        pthread_mutex_t *getMutexPtr() { return &mutex_;}  $/;"	f	class:MutexLock	access:public	signature:()
+getPeerAddr	TcpConnection.h	/^        const InetAddress &getPeerAddr() const$/;"	f	class:TcpConnection	access:public	signature:() const
+getPeerAddress	InetAddress.cpp	/^InetAddress InetAddress::getPeerAddress(int sockfd)$/;"	f	class:InetAddress	signature:(int sockfd)
+getPeerAddress	InetAddress.h	/^        static InetAddress getPeerAddress(int sockfd);$/;"	p	class:InetAddress	access:public	signature:(int sockfd)
+getSockAddrInet	InetAddress.h	/^        const struct sockaddr_in *getSockAddrInet() const$/;"	f	class:InetAddress	access:public	signature:() const
+getTask	ThreadPool.cpp	/^ThreadPool::Task ThreadPool::getTask()$/;"	f	class:ThreadPool	signature:()
+getTask	ThreadPool.h	/^        Task getTask();$/;"	p	class:ThreadPool	access:public	signature:()
+handleAccept	PollPoller.cpp	/^void PollPoller::handleAccept()$/;"	f	class:PollPoller	signature:()
+handleAccept	PollPoller.h	/^        void handleAccept();$/;"	p	class:PollPoller	access:public	signature:()
+handleClose	TcpConnection.cpp	/^void TcpConnection::handleClose()$/;"	f	class:TcpConnection	signature:()
+handleClose	TcpConnection.h	/^        void handleClose();$/;"	p	class:TcpConnection	access:public	signature:()
+handleCloseEvent	PollPoller.cpp	/^void PollPoller::handleCloseEvent(int i)$/;"	f	class:PollPoller	signature:(int i)
+handleCloseEvent	PollPoller.h	/^        void handleCloseEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
+handleConnection	TcpConnection.cpp	/^void TcpConnection::handleConnection()$/;"	f	class:TcpConnection	signature:()
+handleConnection	TcpConnection.h	/^        void handleConnection();$/;"	p	class:TcpConnection	access:public	signature:()
+handleConnectionEvent	PollPoller.cpp	/^void PollPoller::handleConnectionEvent(int peerfd)$/;"	f	class:PollPoller	signature:(int peerfd)
+handleConnectionEvent	PollPoller.h	/^        void handleConnectionEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
+handleData	PollPoller.cpp	/^void PollPoller::handleData()$/;"	f	class:PollPoller	signature:()
+handleData	PollPoller.h	/^        void handleData();$/;"	p	class:PollPoller	access:public	signature:()
+handleMessage	TcpConnection.cpp	/^void TcpConnection::handleMessage()$/;"	f	class:TcpConnection	signature:()
+handleMessage	TcpConnection.h	/^        void handleMessage();$/;"	p	class:TcpConnection	access:public	signature:()
+handleMessageEvent	PollPoller.cpp	/^void PollPoller::handleMessageEvent(int peerfd)$/;"	f	class:PollPoller	signature:(int peerfd)
+handleMessageEvent	PollPoller.h	/^        void handleMessageEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
+ipNetEndian	InetAddress.h	/^        uint32_t ipNetEndian() const$/;"	f	class:InetAddress	access:public	signature:() const
+isLocked	MutexLock.h	/^        bool isLocked() const { return isLocked_; }$/;"	f	class:MutexLock	access:public	signature:() const
+isLocked_	MutexLock.h	/^        bool isLocked_;$/;"	m	class:MutexLock	access:private
+isStarted_	Thread.h	/^        bool isStarted_;$/;"	m	class:Thread	access:private
+isStarted_	ThreadPool.h	/^        bool isStarted_;  \/\/线程池是否开启$/;"	m	class:ThreadPool	access:private
+join	Thread.cpp	/^void Thread::join()$/;"	f	class:Thread	signature:()
+join	Thread.h	/^        void join();$/;"	p	class:Thread	access:public	signature:()
+kPoolQueueSize	PollPoller.h	/^        static size_t kPoolQueueSize;$/;"	m	class:PollPoller	access:private
+kPoolThreadSize	PollPoller.cpp	/^size_t PollPoller::kPoolThreadSize = 4;$/;"	m	class:PollPoller	file:
+kPoolThreadSize	PollPoller.h	/^        static size_t kPoolThreadSize;$/;"	m	class:PollPoller	access:private
+left_	Rio.h	/^        int left_;$/;"	m	class:Rio	access:private
+listen	Socket.cpp	/^void Socket::listen()$/;"	f	class:Socket	signature:()
+listen	Socket.h	/^        void listen();$/;"	p	class:Socket	access:public	signature:()
+listenfd_	PollPoller.h	/^        int listenfd_;$/;"	m	class:PollPoller	access:private
+lists_	PollPoller.h	/^        std::map<int, TcpConnectionPtr> lists_; \/\/从fd到TcpConnection的映射$/;"	m	class:PollPoller	access:private
+localAddr_	TcpConnection.h	/^        const InetAddress localAddr_;  \/\/Local$/;"	m	class:TcpConnection	access:private
+lock	MutexLock.h	/^        void lock();$/;"	p	class:MutexLock	access:private	signature:()
+lock	MutexLock.h	/^inline void MutexLock::lock()$/;"	f	class:MutexLock	signature:()
+main	test_echo_server.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	test_server.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	test_tcp_server.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+maxi_	PollPoller.h	/^        int maxi_;$/;"	m	class:PollPoller	access:private
+mutex_	Condition.h	/^        MutexLock &mutex_;$/;"	m	class:Condition	access:private
+mutex_	MutexLock.h	/^        MutexLock &mutex_;$/;"	m	class:MutexLockGuard	access:private
+mutex_	MutexLock.h	/^        pthread_mutex_t mutex_;$/;"	m	class:MutexLock	access:private
+mutex_	ThreadPool.h	/^        mutable MutexLock mutex_;$/;"	m	class:ThreadPool	access:private
+notify	Condition.cpp	/^void Condition::notify()$/;"	f	class:Condition	signature:()
+notify	Condition.h	/^        void notify();$/;"	p	class:Condition	access:public	signature:()
+notifyAll	Condition.cpp	/^void Condition::notifyAll()$/;"	f	class:Condition	signature:()
+notifyAll	Condition.h	/^        void notifyAll();$/;"	p	class:Condition	access:public	signature:()
+nready_	PollPoller.h	/^        int nready_;$/;"	m	class:PollPoller	access:private
+onCloseCallback_	PollPoller.h	/^        PollerCallback onCloseCallback_;$/;"	m	class:PollPoller	access:private
+onCloseCallback_	TcpConnection.h	/^        TcpConnectionCallback onCloseCallback_;  \/\/连接关闭$/;"	m	class:TcpConnection	access:private
+onClose_	TcpServer.h	/^        TcpCallback onClose_;$/;"	m	class:TcpServer	access:private
+onConnect	test_echo_server.cpp	/^        void onConnect(const TcpConnectionPtr &conn)$/;"	f	class:EchoServer	file:	access:private	signature:(const TcpConnectionPtr &conn)
+onConnect	test_tcp_server.cpp	/^void onConnect(const TcpConnectionPtr &conn)$/;"	f	signature:(const TcpConnectionPtr &conn)
+onConnect_	TcpServer.h	/^        TcpCallback onConnect_;$/;"	m	class:TcpServer	access:private
+onConnectionCallback_	PollPoller.h	/^        PollerCallback onConnectionCallback_;$/;"	m	class:PollPoller	access:private
+onConnectionCallback_	TcpConnection.h	/^        TcpConnectionCallback onConnectionCallback_; \/\/连接建立时的回调$/;"	m	class:TcpConnection	access:private
+onMessage	test_echo_server.cpp	/^        void onMessage(const TcpConnectionPtr &conn)$/;"	f	class:EchoServer	file:	access:private	signature:(const TcpConnectionPtr &conn)
+onMessage	test_server.cpp	/^void onMessage(const TcpConnectionPtr &conn)$/;"	f	signature:(const TcpConnectionPtr &conn)
+onMessage	test_tcp_server.cpp	/^void onMessage(const TcpConnectionPtr &conn)$/;"	f	signature:(const TcpConnectionPtr &conn)
+onMessageCallback_	PollPoller.h	/^        PollerCallback onMessageCallback_;$/;"	m	class:PollPoller	access:private
+onMessageCallback_	TcpConnection.h	/^        TcpConnectionCallback onMessageCallback_;  \/\/消息到达$/;"	m	class:TcpConnection	access:private
+onMessage_	TcpServer.h	/^        TcpCallback onMessage_;$/;"	m	class:TcpServer	access:private
+operator =	NonCopyable.h	/^        void operator=(const NonCopyable &);$/;"	p	class:NonCopyable	access:private	signature:(const NonCopyable &)
+peerAddr_	TcpConnection.h	/^        const InetAddress peerAddr_;   \/\/Peer    $/;"	m	class:TcpConnection	access:private
+poll	PollPoller.cpp	/^void PollPoller::poll()$/;"	f	class:PollPoller	signature:()
+poll	PollPoller.h	/^        void poll();$/;"	p	class:PollPoller	access:public	signature:()
+poller_	TcpServer.h	/^        std::unique_ptr<PollPoller> poller_;$/;"	m	class:TcpServer	access:private
+poolSize_	ThreadPool.h	/^        size_t poolSize_;  \/\/线程池的大小$/;"	m	class:ThreadPool	access:private
+portNetEndian	InetAddress.h	/^        uint16_t portNetEndian() const$/;"	f	class:InetAddress	access:public	signature:() const
+processClose	PollPoller.h	/^        void processClose(const TcpConnectionPtr &conn)$/;"	f	class:PollPoller	access:public	signature:(const TcpConnectionPtr &conn)
+processConnect	PollPoller.h	/^        void processConnect(const TcpConnectionPtr &conn)$/;"	f	class:PollPoller	access:public	signature:(const TcpConnectionPtr &conn)
+processMessage	PollPoller.h	/^        void processMessage(const TcpConnectionPtr &conn)$/;"	f	class:PollPoller	access:public	signature:(const TcpConnectionPtr &conn)
+queueSize_	ThreadPool.h	/^        size_t queueSize_;  \/\/队列大小$/;"	m	class:ThreadPool	access:private
+queue_	ThreadPool.h	/^        std::queue<Task> queue_;$/;"	m	class:ThreadPool	access:private
+read	Rio.cpp	/^ssize_t Rio::read(char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(char *usrbuf, size_t n)
+read	Rio.h	/^        ssize_t read(char *usrbuf, size_t n);$/;"	p	class:Rio	access:private	signature:(char *usrbuf, size_t n)
+readLine	TcpConnection.cpp	/^ssize_t TcpConnection::readLine(char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(char *usrbuf, size_t n)
+readLine	TcpConnection.h	/^        ssize_t readLine(char *usrbuf, size_t maxline);$/;"	p	class:TcpConnection	access:public	signature:(char *usrbuf, size_t maxline)
+readline	Rio.cpp	/^ssize_t Rio::readline(char *usrbuf, size_t maxlen)$/;"	f	class:Rio	signature:(char *usrbuf, size_t maxlen)
+readline	Rio.h	/^        ssize_t readline(char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(char *usrbuf, size_t n)
+readn	Rio.cpp	/^ssize_t Rio::readn(char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(char *usrbuf, size_t n)
+readn	Rio.h	/^        ssize_t readn(char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(char *usrbuf, size_t n)
+readn	TcpConnection.cpp	/^ssize_t TcpConnection::readn(char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(char *usrbuf, size_t n)
+readn	TcpConnection.h	/^        ssize_t readn(char *usrbuf, size_t n);$/;"	p	class:TcpConnection	access:public	signature:(char *usrbuf, size_t n)
+receive	TcpConnection.cpp	/^std::string TcpConnection::receive()$/;"	f	class:TcpConnection	signature:()
+receive	TcpConnection.h	/^        std::string receive();$/;"	p	class:TcpConnection	access:public	signature:()
+runInThread	ThreadPool.cpp	/^void ThreadPool::runInThread()$/;"	f	class:ThreadPool	signature:()
+runInThread	ThreadPool.h	/^        void runInThread();  \/\/线程池内线程的回调函数$/;"	p	class:ThreadPool	access:private	signature:()
+send	TcpConnection.cpp	/^void TcpConnection::send(const std::string &s)$/;"	f	class:TcpConnection	signature:(const std::string &s)
+send	TcpConnection.h	/^        void send(const std::string &s);$/;"	p	class:TcpConnection	access:public	signature:(const std::string &s)
+server_	test_echo_server.cpp	/^        TcpServer server_;$/;"	m	class:EchoServer	file:	access:private
+setClose	TcpServer.h	/^        void setClose(const TcpCallback &cb)$/;"	f	class:TcpServer	access:public	signature:(const TcpCallback &cb)
+setCloseCallback	PollPoller.h	/^        void setCloseCallback(const PollerCallback &cb)$/;"	f	class:PollPoller	access:public	signature:(const PollerCallback &cb)
+setCloseCallback	TcpConnection.h	/^        void setCloseCallback(const TcpConnectionCallback &cb)$/;"	f	class:TcpConnection	access:public	signature:(const TcpConnectionCallback &cb)
+setConnection	TcpServer.h	/^        void setConnection(const TcpCallback &cb)$/;"	f	class:TcpServer	access:public	signature:(const TcpCallback &cb)
+setConnectionCallback	PollPoller.h	/^        void setConnectionCallback(const PollerCallback &cb)$/;"	f	class:PollPoller	access:public	signature:(const PollerCallback &cb)
+setConnectionCallback	TcpConnection.h	/^        void setConnectionCallback(const TcpConnectionCallback &cb)$/;"	f	class:TcpConnection	access:public	signature:(const TcpConnectionCallback &cb)
+setMessage	TcpServer.h	/^        void setMessage(const TcpCallback &cb)$/;"	f	class:TcpServer	access:public	signature:(const TcpCallback &cb)
+setMessageCallback	PollPoller.h	/^        void setMessageCallback(const PollerCallback &cb)$/;"	f	class:PollPoller	access:public	signature:(const PollerCallback &cb)
+setMessageCallback	TcpConnection.h	/^        void setMessageCallback(const TcpConnectionCallback &cb)$/;"	f	class:TcpConnection	access:public	signature:(const TcpConnectionCallback &cb)
+setReusePort	Socket.cpp	/^void Socket::setReusePort()$/;"	f	class:Socket	signature:()
+setReusePort	Socket.h	/^        void setReusePort();$/;"	p	class:Socket	access:public	signature:()
+setSockAddrInet	InetAddress.h	/^        void setSockAddrInet(const struct sockaddr_in &addr)$/;"	f	class:InetAddress	access:public	signature:(const struct sockaddr_in &addr)
+shutdown	TcpConnection.cpp	/^void TcpConnection::shutdown()$/;"	f	class:TcpConnection	signature:()
+shutdown	TcpConnection.h	/^        void shutdown();$/;"	p	class:TcpConnection	access:public	signature:()
+shutdownWrite	Socket.cpp	/^void Socket::shutdownWrite()$/;"	f	class:Socket	signature:()
+shutdownWrite	Socket.h	/^        void shutdownWrite();   $/;"	p	class:Socket	access:public	signature:()
+sock_	TcpServer.h	/^        std::unique_ptr<Socket> sock_;$/;"	m	class:TcpServer	access:private
+sockfd_	Socket.h	/^        const int sockfd_;$/;"	m	class:Socket	access:private
+sockfd_	TcpConnection.h	/^        Socket sockfd_;  \/\/fd$/;"	m	class:TcpConnection	access:private
+start	TcpServer.cpp	/^void TcpServer::start()$/;"	f	class:TcpServer	signature:()
+start	TcpServer.h	/^        void start();$/;"	p	class:TcpServer	access:public	signature:()
+start	Thread.cpp	/^void Thread::start()$/;"	f	class:Thread	signature:()
+start	Thread.h	/^        void start();$/;"	p	class:Thread	access:public	signature:()
+start	ThreadPool.cpp	/^void ThreadPool::start()$/;"	f	class:ThreadPool	signature:()
+start	ThreadPool.h	/^        void start(); \/\/启动线程池new$/;"	p	class:ThreadPool	access:public	signature:()
+start	test_echo_server.cpp	/^        void start()$/;"	f	class:EchoServer	access:public	signature:()
+stop	ThreadPool.cpp	/^void ThreadPool::stop()$/;"	f	class:ThreadPool	signature:()
+stop	ThreadPool.h	/^        void stop();  \/\/停止线程池$/;"	p	class:ThreadPool	access:public	signature:()
+threadFunc	Thread.cpp	/^void *Thread::threadFunc(void *arg)$/;"	f	class:Thread	signature:(void *arg)
+threadFunc	Thread.h	/^        static void *threadFunc(void *);$/;"	p	class:Thread	access:private	signature:(void *)
+threadp_	TcpServer.h	/^		std::unique_ptr<ThreadPoll> threadp_;$/;"	m	class:TcpServer	access:private
+threads_	ThreadPool.h	/^		std::vector<std::shared_ptr<Thread>> threads_;\/\/new$/;"	m	class:ThreadPool	access:private
+tid_	Thread.h	/^        pthread_t tid_;$/;"	m	class:Thread	access:private
+toIp	InetAddress.cpp	/^std::string InetAddress::toIp() const$/;"	f	class:InetAddress	signature:() const
+toIp	InetAddress.h	/^        std::string toIp() const;$/;"	p	class:InetAddress	access:public	signature:() const
+toPort	InetAddress.cpp	/^uint16_t InetAddress::toPort() const$/;"	f	class:InetAddress	signature:() const
+toPort	InetAddress.h	/^        uint16_t toPort() const;$/;"	p	class:InetAddress	access:public	signature:() const
+unlock	MutexLock.h	/^        void unlock();$/;"	p	class:MutexLock	access:private	signature:()
+unlock	MutexLock.h	/^inline void MutexLock::unlock()$/;"	f	class:MutexLock	signature:()
+wait	Condition.cpp	/^void Condition::wait()$/;"	f	class:Condition	signature:()
+wait	Condition.h	/^        void wait();$/;"	p	class:Condition	access:public	signature:()
+writen	Rio.cpp	/^ssize_t Rio::writen(const char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(const char *usrbuf, size_t n)
+writen	Rio.h	/^        ssize_t writen(const char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(const char *usrbuf, size_t n)
+writen	TcpConnection.cpp	/^ssize_t TcpConnection::writen(const char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(const char *usrbuf, size_t n)
+writen	TcpConnection.h	/^        ssize_t writen(const char *usrbuf, size_t n);$/;"	p	class:TcpConnection	access:public	signature:(const char *usrbuf, size_t n)
+~Condition	Condition.cpp	/^Condition::~Condition()$/;"	f	class:Condition	signature:()
+~Condition	Condition.h	/^        ~Condition();$/;"	p	class:Condition	access:public	signature:()
+~MutexLock	MutexLock.h	/^        ~MutexLock();$/;"	p	class:MutexLock	access:public	signature:()
+~MutexLock	MutexLock.h	/^inline MutexLock::~MutexLock()$/;"	f	class:MutexLock	signature:()
+~MutexLockGuard	MutexLock.h	/^        ~MutexLockGuard();$/;"	p	class:MutexLockGuard	access:public	signature:()
+~MutexLockGuard	MutexLock.h	/^inline MutexLockGuard::~MutexLockGuard()$/;"	f	class:MutexLockGuard	signature:()
+~NonCopyable	NonCopyable.h	/^        ~NonCopyable() {}$/;"	f	class:NonCopyable	access:public	signature:()
+~PollPoller	PollPoller.cpp	/^PollPoller::~PollPoller()$/;"	f	class:PollPoller	signature:()
+~PollPoller	PollPoller.h	/^        ~PollPoller();$/;"	p	class:PollPoller	access:public	signature:()
+~Socket	Socket.cpp	/^Socket::~Socket()$/;"	f	class:Socket	signature:()
+~Socket	Socket.h	/^        ~Socket();$/;"	p	class:Socket	access:public	signature:()
+~TcpConnection	TcpConnection.cpp	/^TcpConnection::~TcpConnection()$/;"	f	class:TcpConnection	signature:()
+~TcpConnection	TcpConnection.h	/^        ~TcpConnection();$/;"	p	class:TcpConnection	access:public	signature:()
+~Thread	Thread.cpp	/^Thread::~Thread()$/;"	f	class:Thread	signature:()
+~Thread	Thread.h	/^        ~Thread();$/;"	p	class:Thread	access:public	signature:()
+~ThreadPool	ThreadPool.cpp	/^ThreadPool::~ThreadPool()$/;"	f	class:ThreadPool	signature:()
+~ThreadPool	ThreadPool.h	/^        ~ThreadPool();$/;"	p	class:ThreadPool	access:public	signature:()

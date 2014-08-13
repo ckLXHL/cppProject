@@ -1,0 +1,115 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Queue	queue.h	/^		Queue(): head(0), tail(0) { }$/;"	f	class:Queue	access:public	signature:()
+Queue	queue.h	/^		Queue(const Queue &Q): head(0), tail(0){ copy_elems(Q); }$/;"	f	class:Queue	access:public	signature:(const Queue &Q)
+Queue	queue.h	/^class Queue {$/;"	c
+Queue::Queue	queue.h	/^		Queue(): head(0), tail(0) { }$/;"	f	class:Queue	access:public	signature:()
+Queue::Queue	queue.h	/^		Queue(const Queue &Q): head(0), tail(0){ copy_elems(Q); }$/;"	f	class:Queue	access:public	signature:(const Queue &Q)
+Queue::copy_elems	queue.cpp	/^void Queue::copy_elems(const Queue& orig)$/;"	f	class:Queue	signature:(const Queue& orig)
+Queue::copy_elems	queue.h	/^		void copy_elems(const Queue&);$/;"	p	class:Queue	access:private	signature:(const Queue&)
+Queue::destroy	queue.cpp	/^void Queue::destroy()$/;"	f	class:Queue	signature:()
+Queue::destroy	queue.h	/^		void destroy();$/;"	p	class:Queue	access:private	signature:()
+Queue::empty	queue.h	/^		bool empty() const{ return head == 0; }$/;"	f	class:Queue	access:public	signature:() const
+Queue::front	queue.h	/^		const int& front() const { return head->item; }$/;"	f	class:Queue	access:public	signature:() const
+Queue::front	queue.h	/^		int& front() { return head->item; }$/;"	f	class:Queue	access:public	signature:()
+Queue::head	queue.h	/^		QueueItem *head;$/;"	m	class:Queue	access:private
+Queue::operator =	queue.h	/^		Queue& operator = (const Queue&);$/;"	p	class:Queue	access:public	signature:(const Queue&)
+Queue::pop	queue.cpp	/^void Queue::pop()$/;"	f	class:Queue	signature:()
+Queue::pop	queue.h	/^		void pop();$/;"	p	class:Queue	access:public	signature:()
+Queue::print	queue.cpp	/^ostream& Queue::print(ostream &os) const {$/;"	f	class:Queue	signature:(ostream &os) const
+Queue::print	queue.h	/^		ostream &print(ostream &) const;$/;"	p	class:Queue	access:public	signature:(ostream &) const
+Queue::push	queue.cpp	/^void Queue::push(const int& val)$/;"	f	class:Queue	signature:(const int& val)
+Queue::push	queue.h	/^		void push(const int &);$/;"	p	class:Queue	access:public	signature:(const int &)
+Queue::tail	queue.h	/^		QueueItem *tail;$/;"	m	class:Queue	access:private
+Queue::~Queue	queue.h	/^		~Queue(){ destroy(); }$/;"	f	class:Queue	access:public	signature:()
+QueueItem	queue.h	/^	QueueItem(const int &t): item(t), next(0) { }$/;"	f	class:QueueItem	access:private	signature:(const int &t)
+QueueItem	queue.h	/^class QueueItem {$/;"	c
+QueueItem::QueueItem	queue.h	/^	QueueItem(const int &t): item(t), next(0) { }$/;"	f	class:QueueItem	access:private	signature:(const int &t)
+QueueItem::item	queue.h	/^	int item;$/;"	m	class:QueueItem	access:private
+QueueItem::next	queue.h	/^	QueueItem *next;$/;"	m	class:QueueItem	access:private
+__QUEUE_H__	queue.h	2;"	d
+assign	query.cpp	/^			void assign(it, it);$/;"	p	class:my_queue	file:	access:public	signature:(it, it)
+assign	query.cpp	/^void my_queue<T>::assign(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+copy_ele	query.cpp	/^			void copy_ele(it, it);$/;"	p	class:my_queue	file:	access:private	signature:(it, it)
+copy_ele	query.cpp	/^		void copy_ele(const my_queue<T>&);$/;"	p	class:my_queue	file:	access:private	signature:(const my_queue<T>&)
+copy_ele	query.cpp	/^void my_queue<T>::copy_ele(const my_queue& q){$/;"	f	class:my_queue	signature:(const my_queue& q)
+copy_ele	query.cpp	/^void my_queue<T>::copy_ele(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+copy_elems	queue.cpp	/^void Queue::copy_elems(const Queue& orig)$/;"	f	class:Queue	signature:(const Queue& orig)
+copy_elems	queue.h	/^		void copy_elems(const Queue&);$/;"	p	class:Queue	access:private	signature:(const Queue&)
+destroy	query.cpp	/^		void destroy();$/;"	p	class:my_queue	file:	access:private	signature:()
+destroy	query.cpp	/^void my_queue<T>::destroy(){$/;"	f	class:my_queue	signature:()
+destroy	queue.cpp	/^void Queue::destroy()$/;"	f	class:Queue	signature:()
+destroy	queue.h	/^		void destroy();$/;"	p	class:Queue	access:private	signature:()
+empty	query.cpp	/^		bool empty(){ return head == 0; }$/;"	f	class:my_queue	access:public	signature:()
+empty	queue.h	/^		bool empty() const{ return head == 0; }$/;"	f	class:Queue	access:public	signature:() const
+front	query.cpp	/^		T& front(){ return head->item; }$/;"	f	class:my_queue	access:public	signature:()
+front	query.cpp	/^		const T& front() const { return head->item; };$/;"	f	class:my_queue	access:public	signature:() const
+front	queue.h	/^		const int& front() const { return head->item; }$/;"	f	class:Queue	access:public	signature:() const
+front	queue.h	/^		int& front() { return head->item; }$/;"	f	class:Queue	access:public	signature:()
+head	query.cpp	/^		my_queueItem<T> *head;$/;"	m	class:my_queue	file:	access:private
+head	queue.h	/^		QueueItem *head;$/;"	m	class:Queue	access:private
+item	query.cpp	/^	T item;$/;"	m	class:my_queueItem	file:	access:private
+item	queue.h	/^	int item;$/;"	m	class:QueueItem	access:private
+main	main.cpp	/^int main(void)$/;"	f	signature:(void)
+main	query.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+my_queue	query.cpp	/^			my_queue(it beg, it end):$/;"	f	class:my_queue	access:public	signature:(it beg, it end)
+my_queue	query.cpp	/^		my_queue(): head(0), tail(0) { };$/;"	f	class:my_queue	access:public	signature:()
+my_queue	query.cpp	/^		my_queue(const my_queue<T>& q): head(0), tail(0) { copy_ele(q); };$/;"	f	class:my_queue	access:public	signature:(const my_queue<T>& q)
+my_queue	query.cpp	/^template <class T> class my_queue {$/;"	c	file:
+my_queue::assign	query.cpp	/^			void assign(it, it);$/;"	p	class:my_queue	file:	access:public	signature:(it, it)
+my_queue::assign	query.cpp	/^void my_queue<T>::assign(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+my_queue::copy_ele	query.cpp	/^			void copy_ele(it, it);$/;"	p	class:my_queue	file:	access:private	signature:(it, it)
+my_queue::copy_ele	query.cpp	/^		void copy_ele(const my_queue<T>&);$/;"	p	class:my_queue	file:	access:private	signature:(const my_queue<T>&)
+my_queue::copy_ele	query.cpp	/^void my_queue<T>::copy_ele(const my_queue& q){$/;"	f	class:my_queue	signature:(const my_queue& q)
+my_queue::copy_ele	query.cpp	/^void my_queue<T>::copy_ele(it beg, it end){$/;"	f	class:my_queue	signature:(it beg, it end)
+my_queue::destroy	query.cpp	/^		void destroy();$/;"	p	class:my_queue	file:	access:private	signature:()
+my_queue::destroy	query.cpp	/^void my_queue<T>::destroy(){$/;"	f	class:my_queue	signature:()
+my_queue::empty	query.cpp	/^		bool empty(){ return head == 0; }$/;"	f	class:my_queue	access:public	signature:()
+my_queue::front	query.cpp	/^		T& front(){ return head->item; }$/;"	f	class:my_queue	access:public	signature:()
+my_queue::front	query.cpp	/^		const T& front() const { return head->item; };$/;"	f	class:my_queue	access:public	signature:() const
+my_queue::head	query.cpp	/^		my_queueItem<T> *head;$/;"	m	class:my_queue	file:	access:private
+my_queue::my_queue	query.cpp	/^			my_queue(it beg, it end):$/;"	f	class:my_queue	access:public	signature:(it beg, it end)
+my_queue::my_queue	query.cpp	/^		my_queue(): head(0), tail(0) { };$/;"	f	class:my_queue	access:public	signature:()
+my_queue::my_queue	query.cpp	/^		my_queue(const my_queue<T>& q): head(0), tail(0) { copy_ele(q); };$/;"	f	class:my_queue	access:public	signature:(const my_queue<T>& q)
+my_queue::operator <<	query.cpp	/^	friend ostream& operator << <T>(ostream&, const my_queue<T>&);$/;"	p	class:my_queue	file:	access:friend	signature:(ostream&, const my_queue<T>&)
+my_queue::pop	query.cpp	/^		void pop();$/;"	p	class:my_queue	file:	access:public	signature:()
+my_queue::pop	query.cpp	/^void my_queue<T>::pop(){$/;"	f	class:my_queue	signature:()
+my_queue::print	query.cpp	/^		ostream& print(ostream&);$/;"	p	class:my_queue	file:	access:public	signature:(ostream&)
+my_queue::print	query.cpp	/^ostream& my_queue<T>::print(ostream& os){$/;"	f	class:my_queue	signature:(ostream& os)
+my_queue::push	query.cpp	/^		void push(const T&);$/;"	p	class:my_queue	file:	access:public	signature:(const T&)
+my_queue::push	query.cpp	/^void my_queue<T>::push(const T& t){$/;"	f	class:my_queue	signature:(const T& t)
+my_queue::tail	query.cpp	/^		my_queueItem<T> *tail;$/;"	m	class:my_queue	file:	access:private
+my_queue::~my_queue	query.cpp	/^		~my_queue() { destroy(); }$/;"	f	class:my_queue	access:public	signature:()
+my_queueItem	query.cpp	/^	my_queueItem(const T &val): item(val), next(0) { }$/;"	f	class:my_queueItem	file:	access:private	signature:(const T &val)
+my_queueItem	query.cpp	/^template <class T> class my_queueItem {$/;"	c	file:
+my_queueItem::item	query.cpp	/^	T item;$/;"	m	class:my_queueItem	file:	access:private
+my_queueItem::my_queueItem	query.cpp	/^	my_queueItem(const T &val): item(val), next(0) { }$/;"	f	class:my_queueItem	file:	access:private	signature:(const T &val)
+my_queueItem::next	query.cpp	/^	my_queueItem *next;$/;"	m	class:my_queueItem	file:	access:private
+my_queueItem::operator <<	query.cpp	/^	friend ostream& operator << <T>(ostream&, const my_queue<T>&);$/;"	p	class:my_queueItem	file:	access:friend	signature:(ostream&, const my_queue<T>&)
+next	query.cpp	/^	my_queueItem *next;$/;"	m	class:my_queueItem	file:	access:private
+next	queue.h	/^	QueueItem *next;$/;"	m	class:QueueItem	access:private
+operator <<	query.cpp	/^	friend ostream& operator << <T>(ostream&, const my_queue<T>&);$/;"	p	class:my_queue	file:	access:friend	signature:(ostream&, const my_queue<T>&)
+operator <<	query.cpp	/^	friend ostream& operator << <T>(ostream&, const my_queue<T>&);$/;"	p	class:my_queueItem	file:	access:friend	signature:(ostream&, const my_queue<T>&)
+operator <<	query.cpp	/^ostream& operator << (ostream& os, const my_queue<T>& q) {$/;"	f	signature:(ostream& os, const my_queue<T>& q)
+operator <<	query.cpp	/^template <class T> ostream& operator << (ostream&, const my_queue<T>&);$/;"	p	file:	signature:(ostream&, const my_queue<T>&)
+operator =	queue.h	/^		Queue& operator = (const Queue&);$/;"	p	class:Queue	access:public	signature:(const Queue&)
+pop	query.cpp	/^		void pop();$/;"	p	class:my_queue	file:	access:public	signature:()
+pop	query.cpp	/^void my_queue<T>::pop(){$/;"	f	class:my_queue	signature:()
+pop	queue.cpp	/^void Queue::pop()$/;"	f	class:Queue	signature:()
+pop	queue.h	/^		void pop();$/;"	p	class:Queue	access:public	signature:()
+print	query.cpp	/^		ostream& print(ostream&);$/;"	p	class:my_queue	file:	access:public	signature:(ostream&)
+print	query.cpp	/^ostream& my_queue<T>::print(ostream& os){$/;"	f	class:my_queue	signature:(ostream& os)
+print	queue.cpp	/^ostream& Queue::print(ostream &os) const {$/;"	f	class:Queue	signature:(ostream &os) const
+print	queue.h	/^		ostream &print(ostream &) const;$/;"	p	class:Queue	access:public	signature:(ostream &) const
+push	query.cpp	/^		void push(const T&);$/;"	p	class:my_queue	file:	access:public	signature:(const T&)
+push	query.cpp	/^void my_queue<T>::push(const T& t){$/;"	f	class:my_queue	signature:(const T& t)
+push	queue.cpp	/^void Queue::push(const int& val)$/;"	f	class:Queue	signature:(const int& val)
+push	queue.h	/^		void push(const int &);$/;"	p	class:Queue	access:public	signature:(const int &)
+tail	query.cpp	/^		my_queueItem<T> *tail;$/;"	m	class:my_queue	file:	access:private
+tail	queue.h	/^		QueueItem *tail;$/;"	m	class:Queue	access:private
+~Queue	queue.h	/^		~Queue(){ destroy(); }$/;"	f	class:Queue	access:public	signature:()
+~my_queue	query.cpp	/^		~my_queue() { destroy(); }$/;"	f	class:my_queue	access:public	signature:()

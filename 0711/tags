@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+M	test.cpp	/^int N, M;$/;"	v
+N	test.cpp	/^int N, M;$/;"	v
+check	test.cpp	/^int check(int cal){$/;"	f	signature:(int cal)
+get	test.cpp	/^int get(int x, int y){$/;"	f	signature:(int x, int y)
+go	test.cpp	/^int go[5][2]={1, 0, -1, 0, 0, 0, 0, 1, 0, -1};$/;"	v
+main	exception.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	test.cpp	/^int main()$/;"	f	signature:()
+metrix	test.cpp	/^int metrix[17][17];$/;"	v
+name_	exception.cpp	/^	string name_;$/;"	m	struct:stu	file:	access:public
+num_	exception.cpp	/^	int num_ ;$/;"	m	struct:stu	file:	access:public
+opt	test.cpp	/^int opt[17][17];$/;"	v
+print	exception.cpp	/^	void print(ostream &os){$/;"	f	struct:stu	access:public	signature:(ostream &os)
+re_mt	test.cpp	/^int re_mt[17][17];$/;"	v
+score	exception.cpp	/^	double score;$/;"	m	struct:stu	file:	access:public
+stu	exception.cpp	/^struct stu {$/;"	s	file:
+stu::name_	exception.cpp	/^	string name_;$/;"	m	struct:stu	file:	access:public
+stu::num_	exception.cpp	/^	int num_ ;$/;"	m	struct:stu	file:	access:public
+stu::print	exception.cpp	/^	void print(ostream &os){$/;"	f	struct:stu	access:public	signature:(ostream &os)
+stu::score	exception.cpp	/^	double score;$/;"	m	struct:stu	file:	access:public

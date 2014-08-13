@@ -1,0 +1,276 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int metrix[17][17];
+int opt[17][17];
+int re_mt[17][17];
+int N, M;
+int go[5][2]={1, 0, -1, 0, 0, 0, 0, 1, 0, -1};
+int get(int x, int y){
+	int res = metrix[x][y];
+	for (int i = 0; i < 5; i++)
+		res += re_mt[go[i][0] + x][go[i][1] + y];
+	return res & 1;
+}
+int check(int cal){
+	memset(re_mt, 0, sizeof(re_mt));
+	int cnt = 0;
+	for (int i = 0; i < N; i++) {
+		re_mt[0][N - i - 1] = (cal >> i & 1);
+	}
+	for (int i = 1; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			re_mt[i][j] = get(i - 1, j);
+		}	
+	}
+	for (int i = 0; i < N; i++) {
+		if(get(M - 1, i))
+			return -1;
+	}
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			cnt += re_mt[i][j];
+		}	
+	}
+	return cnt;
+}
+int main()
+{
+	scanf("%d %d", &M, &N);
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			scanf("%d", &metrix[i][j]);
+		}
+	}
+	int cnt = 0x7fffffff, ret;
+	for (int i = 0; i < 1 << N; i++) {
+		ret = check(i);
+		if(ret >= 0 && ret < cnt){
+			cnt = ret;
+			memcpy(opt, re_mt, sizeof(re_mt));
+		}
+	}
+	if(cnt == 0x7fffffff)
+		puts("IMPOSSIBLE");
+	else
+		for (int j = 0; j < M; j++) {
+			for (int k = 0; k < N; k++) {
+				printf("%d%c", opt[j][k], k + 1 == N ? '\n' : ' ');
+			}
+		}
+	return 0;
+}
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int metrix[17][17];
+int opt[17][17];
+int re_mt[17][17];
+int N, M;
+int go[5][2]={1, 0, -1, 0, 0, 0, 0, 1, 0, -1};
+int get(int x, int y){
+	int res = metrix[x][y];
+	for (int i = 0; i < 5; i++)
+		res += re_mt[go[i][0] + x][go[i][1] + y];
+	return res & 1;
+}
+int check(int cal){
+	memset(re_mt, 0, sizeof(re_mt));
+	int cnt = 0;
+	for (int i = 0; i < N; i++) {
+		re_mt[0][N - i - 1] = (cal >> i & 1);
+	}
+	for (int i = 1; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			re_mt[i][j] = get(i - 1, j);
+		}	
+	}
+	for (int i = 0; i < N; i++) {
+		if(get(M - 1, i))
+			return -1;
+	}
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			cnt += re_mt[i][j];
+		}	
+	}
+	return cnt;
+}
+int main()
+{
+	scanf("%d %d", &M, &N);
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			scanf("%d", &metrix[i][j]);
+		}
+	}
+	int cnt = 0x7fffffff, ret;
+	for (int i = 0; i < 1 << N; i++) {
+		ret = check(i);
+		if(ret >= 0 && ret < cnt){
+			cnt = ret;
+			memcpy(opt, re_mt, sizeof(re_mt));
+		}
+	}
+	if(cnt == 0x7fffffff)
+		puts("IMPOSSIBLE");
+	else
+		for (int j = 0; j < M; j++) {
+			for (int k = 0; k < N; k++) {
+				printf("%d%c", opt[j][k], k + 1 == N ? '\n' : ' ');
+			}
+		}
+	return 0;
+}
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int metrix[17][17];
+int opt[17][17];
+int re_mt[17][17];
+int N, M;
+int go[5][2]={1, 0, -1, 0, 0, 0, 0, 1, 0, -1};
+int get(int x, int y){
+	int res = metrix[x][y];
+	for (int i = 0; i < 5; i++)
+		res += re_mt[go[i][0] + x][go[i][1] + y];
+	return res & 1;
+}
+int check(int cal){
+	memset(re_mt, 0, sizeof(re_mt));
+	int cnt = 0;
+	for (int i = 0; i < N; i++) {
+		re_mt[0][N - i - 1] = (cal >> i & 1);
+	}
+	for (int i = 1; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			re_mt[i][j] = get(i - 1, j);
+		}	
+	}
+	for (int i = 0; i < N; i++) {
+		if(get(M - 1, i))
+			return -1;
+	}
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			cnt += re_mt[i][j];
+		}	
+	}
+	return cnt;
+}
+int main()
+{
+	scanf("%d %d", &M, &N);
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			scanf("%d", &metrix[i][j]);
+		}
+	}
+	int cnt = 0x7fffffff, ret;
+	for (int i = 0; i < 1 << N; i++) {
+		ret = check(i);
+		if(ret >= 0 && ret < cnt){
+			cnt = ret;
+			memcpy(opt, re_mt, sizeof(re_mt));
+		}
+	}
+	if(cnt == 0x7fffffff)
+		puts("IMPOSSIBLE");
+	else
+		for (int j = 0; j < M; j++) {
+			for (int k = 0; k < N; k++) {
+				printf("%d%c", opt[j][k], k + 1 == N ? '\n' : ' ');
+			}
+		}
+	return 0;
+}
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int metrix[17][17];
+int opt[17][17];
+int re_mt[17][17];
+int N, M;
+int go[5][2]={1, 0, -1, 0, 0, 0, 0, 1, 0, -1};
+int get(int x, int y){
+	int res = metrix[x][y];
+	for (int i = 0; i < 5; i++)
+		res += re_mt[go[i][0] + x][go[i][1] + y];
+	return res & 1;
+}
+int check(int cal){
+	memset(re_mt, 0, sizeof(re_mt));
+	int cnt = 0;
+	for (int i = 0; i < N; i++) {
+		re_mt[0][N - i - 1] = (cal >> i & 1);
+	}
+	for (int i = 1; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			re_mt[i][j] = get(i - 1, j);
+		}	
+	}
+	for (int i = 0; i < N; i++) {
+		if(get(M - 1, i))
+			return -1;
+	}
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			cnt += re_mt[i][j];
+		}	
+	}
+	return cnt;
+}
+int main()
+{
+	scanf("%d %d", &M, &N);
+	for (int i = 0; i < M; i++) {
+		for (int j = 0; j < N; j++) {
+			scanf("%d", &metrix[i][j]);
+		}
+	}
+	int cnt = 0x7fffffff, ret;
+	for (int i = 0; i < 1 << N; i++) {
+		ret = check(i);
+		if(ret >= 0 && ret < cnt){
+			cnt = ret;
+			memcpy(opt, re_mt, sizeof(re_mt));
+		}
+	}
+	if(cnt == 0x7fffffff)
+		puts("IMPOSSIBLE");
+	else
+		for (int j = 0; j < M; j++) {
+			for (int k = 0; k < N; k++) {
+				printf("%d%c", opt[j][k], k + 1 == N ? '\n' : ' ');
+			}
+		}
+	return 0;
+}

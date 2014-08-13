@@ -1,0 +1,105 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ERR_EXIT	thread/WR.h	17;"	d
+ERR_EXIT	thread/thread.h	8;"	d
+EVENT_MAX	thread/server_epoll.c	2;"	d	file:
+EXCEPTION_H_	Exception.h	2;"	d
+Exception	Exception.cc	/^Exception::Exception(const char *s)$/;"	f	class:Exception	signature:(const char *s)
+Exception	Exception.cc	/^Exception::Exception(const std::string &s)$/;"	f	class:Exception	signature:(const std::string &s)
+Exception	Exception.h	/^        Exception(const char *);$/;"	p	class:Exception	access:public	signature:(const char *)
+Exception	Exception.h	/^        Exception(const std::string &);$/;"	p	class:Exception	access:public	signature:(const std::string &)
+Exception	Exception.h	/^class Exception : public std::exception$/;"	c	inherits:std::exception
+Exception::Exception	Exception.cc	/^Exception::Exception(const char *s)$/;"	f	class:Exception	signature:(const char *s)
+Exception::Exception	Exception.cc	/^Exception::Exception(const std::string &s)$/;"	f	class:Exception	signature:(const std::string &s)
+Exception::Exception	Exception.h	/^        Exception(const char *);$/;"	p	class:Exception	access:public	signature:(const char *)
+Exception::Exception	Exception.h	/^        Exception(const std::string &);$/;"	p	class:Exception	access:public	signature:(const std::string &)
+Exception::fillStackTrace	Exception.cc	/^void Exception::fillStackTrace()$/;"	f	class:Exception	signature:()
+Exception::fillStackTrace	Exception.h	/^        void fillStackTrace();  \/\/填充栈痕迹$/;"	p	class:Exception	access:private	signature:()
+Exception::message_	Exception.h	/^        std::string message_;  \/\/异常名字$/;"	m	class:Exception	access:private
+Exception::stackTrace	Exception.cc	/^const char *Exception::stackTrace() const throw()$/;"	f	class:Exception	signature:() const
+Exception::stackTrace	Exception.h	/^        const char *stackTrace() const throw(); $/;"	p	class:Exception	access:public	signature:() const
+Exception::stack_	Exception.h	/^        std::string stack_;  \/\/栈痕迹$/;"	m	class:Exception	access:private
+Exception::what	Exception.cc	/^const char *Exception::what() const throw()$/;"	f	class:Exception	signature:() const
+Exception::what	Exception.h	/^        virtual const char * what() const throw();$/;"	p	class:Exception	access:public	signature:() const
+Exception::~Exception	Exception.cc	/^Exception::~Exception() throw()$/;"	f	class:Exception	signature:()
+Exception::~Exception	Exception.h	/^        virtual ~Exception() throw();  \/\/这个函数不抛出异常$/;"	p	class:Exception	access:public	signature:()
+MAXLINE	thread/WR.h	16;"	d
+_WR_H_	thread/WR.h	2;"	d
+add	functional.cc	/^void add(int a, int b, int c) {$/;"	f	signature:(int a, int b, int c)
+bar	main.cc	/^void bar()$/;"	f	signature:()
+bar	teexp.cc	/^  struct bar { };$/;"	s	file:
+create	thread/thread.h	/^		void create() {$/;"	f	class:thread	access:public	signature:()
+do_epoll_server	thread/server_epoll.c	/^void do_epoll_server(int listenfd) {$/;"	f	signature:(int listenfd)
+empty	teexp.cc	/^struct empty { };$/;"	s	file:
+epoll_handle_date	thread/server_epoll.c	/^void epoll_handle_date(epoll_t *ep, int i) {$/;"	f	signature:(epoll_t *ep, int i)
+epoll_handle_listen	thread/server_epoll.c	/^void epoll_handle_listen(epoll_t *ep) {$/;"	f	signature:(epoll_t *ep)
+epoll_handle_wait	thread/server_epoll.c	/^void epoll_handle_wait(epoll_t *ep) {$/;"	f	signature:(epoll_t *ep)
+epoll_init	thread/server_epoll.c	/^void epoll_init(epoll_t *ep, int listenfd) {$/;"	f	signature:(epoll_t *ep, int listenfd)
+epoll_t	thread/server_epoll.c	/^}epoll_t;$/;"	t	typeref:struct:epoll_tag	file:
+epoll_tag	thread/server_epoll.c	/^typedef struct epoll_tag {$/;"	s	file:
+epoll_tag::epollfd_	thread/server_epoll.c	/^	int epollfd_;$/;"	m	struct:epoll_tag	file:	access:public
+epoll_tag::events_	thread/server_epoll.c	/^	struct epoll_event events_[EVENT_MAX];$/;"	m	struct:epoll_tag	typeref:struct:epoll_tag::epoll_event	file:	access:public
+epoll_tag::listenfd_	thread/server_epoll.c	/^	int listenfd_;$/;"	m	struct:epoll_tag	file:	access:public
+epoll_tag::nready_	thread/server_epoll.c	/^	int nready_;$/;"	m	struct:epoll_tag	file:	access:public
+epollfd_	thread/server_epoll.c	/^	int epollfd_;$/;"	m	struct:epoll_tag	file:	access:public
+events_	thread/server_epoll.c	/^	struct epoll_event events_[EVENT_MAX];$/;"	m	struct:epoll_tag	typeref:struct:epoll_tag::epoll_event	file:	access:public
+fillStackTrace	Exception.cc	/^void Exception::fillStackTrace()$/;"	f	class:Exception	signature:()
+fillStackTrace	Exception.h	/^        void fillStackTrace();  \/\/填充栈痕迹$/;"	p	class:Exception	access:private	signature:()
+foo	main.cc	/^void foo()$/;"	f	signature:()
+join	thread/thread.h	/^		void join() const {$/;"	f	class:thread	access:public	signature:() const
+listenfd_	thread/server_epoll.c	/^	int listenfd_;$/;"	m	struct:epoll_tag	file:	access:public
+main	functional.cc	/^int main(void)$/;"	f	signature:(void)
+main	main.cc	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	my_hash_map.cc	/^int main(void)$/;"	f	signature:(void)
+main	teexp.cc	/^int main()$/;"	f	signature:()
+main	thread/main.cc	/^int main() {$/;"	f	signature:()
+main	thread/server_epoll.c	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+message_	Exception.h	/^        std::string message_;  \/\/异常名字$/;"	m	class:Exception	access:private
+nready_	thread/server_epoll.c	/^	int nready_;$/;"	m	struct:epoll_tag	file:	access:public
+pass	thread/thread.h	/^		static void* pass(void *arg) { $/;"	f	class:thread	access:public	signature:(void *arg)
+pid_	thread/thread.h	/^		pthread_t pid_;$/;"	m	class:thread	access:private
+pool_start	thread/thread.h	/^		void pool_start() {$/;"	f	class:thread_pool	access:public	signature:()
+print	thread/main.cc	/^int print() {$/;"	f	signature:()
+readline	thread/WR.c	/^ssize_t readline(int sockfd, void *buf, size_t maxline) {$/;"	f	signature:(int sockfd, void *buf, size_t maxline)
+readline	thread/WR.cpp	/^ssize_t readline(int sockfd, char *buf, size_t maxline) {$/;"	f	signature:(int sockfd, char *buf, size_t maxline)
+readline	thread/WR.h	/^ssize_t readline(int sockfd, void *buf, size_t maxline);$/;"	p	signature:(int sockfd, void *buf, size_t maxline)
+readn	thread/WR.c	/^ssize_t readn(int fd, void *buf, size_t count) {$/;"	f	signature:(int fd, void *buf, size_t count)
+readn	thread/WR.cpp	/^ssize_t readn(int fd, char *buf, size_t count) {$/;"	f	signature:(int fd, char *buf, size_t count)
+readn	thread/WR.h	/^ssize_t readn(int fd, void *buf, size_t count);$/;"	p	signature:(int fd, void *buf, size_t count)
+recv_peek	thread/WR.c	/^ssize_t recv_peek(int sockfd, void *buf, size_t len) {$/;"	f	signature:(int sockfd, void *buf, size_t len)
+recv_peek	thread/WR.cpp	/^ssize_t recv_peek(int sockfd, char *buf, size_t len) {$/;"	f	signature:(int sockfd, char *buf, size_t len)
+recv_peek	thread/WR.h	/^ssize_t recv_peek(int sockfd, void *buf, size_t len);$/;"	p	signature:(int sockfd, void *buf, size_t len)
+run_	thread/thread.h	/^		std::function<int ()> run_;$/;"	m	class:thread	access:private
+run_	thread/thread.h	/^		std::function<int ()> run_;$/;"	m	class:thread_pool	access:private
+server_init	thread/server_epoll.c	/^int server_init(){$/;"	f
+stackTrace	Exception.cc	/^const char *Exception::stackTrace() const throw()$/;"	f	class:Exception	signature:() const
+stackTrace	Exception.h	/^        const char *stackTrace() const throw(); $/;"	p	class:Exception	access:public	signature:() const
+stack_	Exception.h	/^        std::string stack_;  \/\/栈痕迹$/;"	m	class:Exception	access:private
+thread	thread/thread.h	/^		thread(const std::function<int ()> &fun):pid_(), run_(fun) { };$/;"	f	class:thread	access:public	signature:(const std::function<int ()> &fun)
+thread	thread/thread.h	/^class thread {$/;"	c
+thread::create	thread/thread.h	/^		void create() {$/;"	f	class:thread	access:public	signature:()
+thread::join	thread/thread.h	/^		void join() const {$/;"	f	class:thread	access:public	signature:() const
+thread::pass	thread/thread.h	/^		static void* pass(void *arg) { $/;"	f	class:thread	access:public	signature:(void *arg)
+thread::pid_	thread/thread.h	/^		pthread_t pid_;$/;"	m	class:thread	access:private
+thread::run_	thread/thread.h	/^		std::function<int ()> run_;$/;"	m	class:thread	access:private
+thread::thread	thread/thread.h	/^		thread(const std::function<int ()> &fun):pid_(), run_(fun) { };$/;"	f	class:thread	access:public	signature:(const std::function<int ()> &fun)
+thread_num_	thread/thread.h	/^		int thread_num_;$/;"	m	class:thread_pool	access:private
+thread_pool	thread/thread.h	/^		thread_pool(int num, const std::function<int ()>& fun) : $/;"	f	class:thread_pool	access:public	signature:(int num, const std::function<int ()>& fun)
+thread_pool	thread/thread.h	/^class thread_pool {$/;"	c
+thread_pool::pool_start	thread/thread.h	/^		void pool_start() {$/;"	f	class:thread_pool	access:public	signature:()
+thread_pool::run_	thread/thread.h	/^		std::function<int ()> run_;$/;"	m	class:thread_pool	access:private
+thread_pool::thread_num_	thread/thread.h	/^		int thread_num_;$/;"	m	class:thread_pool	access:private
+thread_pool::thread_pool	thread/thread.h	/^		thread_pool(int num, const std::function<int ()>& fun) : $/;"	f	class:thread_pool	access:public	signature:(int num, const std::function<int ()>& fun)
+thread_pool::vt	thread/thread.h	/^		std::vector<thread> vt;$/;"	m	class:thread_pool	access:private
+vt	thread/thread.h	/^		std::vector<thread> vt;$/;"	m	class:thread_pool	access:private
+what	Exception.cc	/^const char *Exception::what() const throw()$/;"	f	class:Exception	signature:() const
+what	Exception.h	/^        virtual const char * what() const throw();$/;"	p	class:Exception	access:public	signature:() const
+writen	thread/WR.c	/^ssize_t writen(int fd, const void *buf, size_t count) {$/;"	f	signature:(int fd, const void *buf, size_t count)
+writen	thread/WR.cpp	/^ssize_t writen(int fd, const char *buf, size_t count) {$/;"	f	signature:(int fd, const char *buf, size_t count)
+writen	thread/WR.h	/^ssize_t writen(int fd, const void *buf, size_t count);$/;"	p	signature:(int fd, const void *buf, size_t count)
+~Exception	Exception.cc	/^Exception::~Exception() throw()$/;"	f	class:Exception	signature:()
+~Exception	Exception.h	/^        virtual ~Exception() throw();  \/\/这个函数不抛出异常$/;"	p	class:Exception	access:public	signature:()
