@@ -1,22 +1,52 @@
 #!/usr/bin/env python
-class Human(object):
-	def __init__(self, input_gender):
-		self.gender = input_gender
-	def printGender(self):
-		print self.gender
-	laugh = 'hahahahah'
-	def show_laugh(self):
-		print self.laugh
-	def laugh_100th(self):
-		for i in range(100):
-			self.show_laugh()
-li_lei = Human('male')
-print(li_lei.gender)
-li_lei.printGender()
-li_lei.laugh = 'ccccc'
-li_lei.show_laugh()
-fu = Human('fu')
-fu.show_laugh()
-fu.laugh_100th()
-fu.show_laugh()
-[1, 2, 3, 4 ,5].__abs__
+print '|', 'hej'.ljust(20), '|', \
+		'hej'.rjust(20), '|',\
+		'hej'.center(20), '|'
+print '|', 'hej'.ljust(20, '+'), '|', \
+		'hej'.rjust(20, '+'), '|',\
+		'hej'.center(20, '+'), '|'
+x = '   hej   '
+print '|', x.lstrip(), '|',\
+		x.rstrip(), '|',\
+		x.strip(), '|'
+x = 'xyyxyxhejyx yyx'
+print '|' + x.strip('xy') + '|'
+x = list('sdfdgsdg')
+print ''.join(x)
+small1 = 'caokai'
+small2 = 'guoxiong'
+small3 = 'kkk'
+pieces = [small1, small2, small3]
+largeString = ''
+for piece in pieces:
+	largeString += piece
+	largeString += ' '
+print largeString.strip()
+print len(largeString)
+largeString = ' '.join(pieces)
+revwords = largeString.split()
+revwords.reverse()
+print ' '.join(revwords)
+print ' '.join(reversed(largeString.split()))
+def containsAny1(seq, aset):
+	for c in seq:
+		if c in aset: return True
+		return False
+import itertools
+def containsAny2(seq, aset):
+	for item in itertools.ifilter(aset.__contains__, seq):
+		return True
+	return False
+def containsAny3(seq, aset):
+	return bool(set(aset).intersection(seq))
+def containsOnly(seq, aset):
+	for c in seq:
+		if c not in aset: return False
+	return True
+def containsALL(seq, aset):
+	return not set(aset).difference(seq)
+print containsAny1('agfdgfs','afgjkatrieajrhuag')
+print containsAny2('agfdgfs','afgjkatrieajrhuag')
+print containsAny3('agfdgfs','afgjkatrieajrhuag')
+print containsOnly('agfdgfs','afgjkatrieajrhuag')
+print containsALL('agfdgfs','afgjkatrieajrhuag')
