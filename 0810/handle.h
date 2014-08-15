@@ -1,8 +1,9 @@
 #ifndef HANDLE_H
 #define HANDLE_H 
 namespace string_handle{
-	void handleLine(std::string&);
-	int calLessRound(const std::string&, const std::string&);
+	vector<uint32_t> translate(const std::string&);
+	int calLessRound(const std::vector<uint32_t>&, const std::vector<uint32_t>&);
+	uint32_t Zi(const std::string&);
 
 	struct matchWord
 	{
