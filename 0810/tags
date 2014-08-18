@@ -5,7 +5,9 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 BIN	Makefile	/^BIN=test$/;"	m
+CACHEMANAGER_H	cacheManager.h	2;"	d
 CACHEPOOL_H	cachePool.h	2;"	d
+CACHE_H	cache.h	2;"	d
 CC	Makefile	/^CC=g++$/;"	m
 CFLAGS	Makefile	/^CFLAGS=-Wall -g$/;"	m
 CONDITION_H	Condition.h	2;"	d
@@ -55,9 +57,11 @@ Exception::what	Exception.cpp	/^const char *Exception::what() const throw()$/;"	
 Exception::what	Exception.h	/^        virtual const char * what() const throw();$/;"	p	class:Exception	access:public	signature:() const
 Exception::~Exception	Exception.cpp	/^Exception::~Exception() throw()$/;"	f	class:Exception	signature:()
 Exception::~Exception	Exception.h	/^        virtual ~Exception() throw();  \/\/这个函数不抛出异常$/;"	p	class:Exception	access:public	signature:()
+Full_	cacheManager.h	/^		size_t Full_;$/;"	m	class:cacheManager	access:private
 HANDLE_H	handle.h	2;"	d
 HandleRequest	correct.cpp	/^void correct::HandleRequest(const TcpConnectionPtr &conn, const std::string &st)$/;"	f	class:correct	signature:(const TcpConnectionPtr &conn, const std::string &st)
 HandleRequest	correct.h	/^		void HandleRequest(const TcpConnectionPtr&, const std::string&);$/;"	p	class:correct	access:private	signature:(const TcpConnectionPtr&, const std::string&)
+Hold	cache.h	/^		void Hold() { hold_ = true; }$/;"	f	class:cache	access:public	signature:()
 INET_ADDRESS_H	InetAddress.h	2;"	d
 IgnoreSigpipe	TcpServer.cpp	/^        IgnoreSigpipe()$/;"	f	class:IgnoreSigpipe	access:public	signature:()
 IgnoreSigpipe	TcpServer.cpp	/^class IgnoreSigpipe$/;"	c	file:
@@ -120,7 +124,9 @@ NonCopyable::NonCopyable	NonCopyable.h	/^        NonCopyable() {}$/;"	f	class:No
 NonCopyable::NonCopyable	NonCopyable.h	/^        NonCopyable(const NonCopyable &);$/;"	p	class:NonCopyable	access:private	signature:(const NonCopyable &)
 NonCopyable::operator =	NonCopyable.h	/^        void operator=(const NonCopyable &);$/;"	p	class:NonCopyable	access:private	signature:(const NonCopyable &)
 NonCopyable::~NonCopyable	NonCopyable.h	/^        ~NonCopyable() {}$/;"	f	class:NonCopyable	access:public	signature:()
-OBJS	Makefile	/^OBJS=.\/tmp\/Socket.o .\/tmp\/Rio.o .\/tmp\/TcpConnection.o .\/tmp\/PollPoller.o .\/tmp\/InetAddress.o .\/tmp\/TcpServer.o .\/tmp\/Thread.o .\/tmp\/Condition.o .\/tmp\/ThreadPool.o .\/tmp\/Exception.o .\/tmp\/Text.o .\/tmp\/correct.o .\/tmp\/Test.o .\/tmp\/Timer.o .\/tmp\/TimerThread.o$/;"	m
+OBJS	Makefile	/^OBJS=.\/tmp\/Socket.o .\/tmp\/Rio.o .\/tmp\/TcpConnection.o .\/tmp\/PollPoller.o .\/tmp\/InetAddress.o .\/tmp\/TcpServer.o .\/tmp\/Thread.o .\/tmp\/Condition.o .\/tmp\/ThreadPool.o .\/tmp\/Exception.o .\/tmp\/handle.o .\/tmp\/Test.o .\/tmp\/Timer.o .\/tmp\/TimerThread.o .\/tmp\/correct.o .\/tmp\/cache.o .\/tmp\/cacheManager.o .\/tmp\/test.o$/;"	m
+OutToFile	cache.cpp	/^const std::string cache::OutToFile() const {$/;"	f	class:cache	signature:() const
+OutToFile	cache.h	/^		std::string OutToFile() const;$/;"	p	class:cache	access:public	signature:() const
 POLL_POLLER_H	PollPoller.h	2;"	d
 PollPoller	PollPoller.cpp	/^PollPoller::PollPoller(int listenfd)$/;"	f	class:PollPoller	signature:(int listenfd)
 PollPoller	PollPoller.h	/^        explicit PollPoller(int listenfd);$/;"	p	class:PollPoller	access:public	signature:(int listenfd)
@@ -289,17 +295,14 @@ Text	Text.h	/^class Text {$/;"	c
 Text::Match	Text.h	/^		bool Match(const std::string &st) $/;"	f	class:Text	access:public	signature:(const std::string &st)
 Text::Text	Text.cpp	/^Text::Text(const std::string &str) {$/;"	f	class:Text	signature:(const std::string &str)
 Text::Text	Text.h	/^		Text (const std::string &);$/;"	p	class:Text	access:public	signature:(const std::string &)
-Text::cache_	Text.h	/^		std::list<std::pair<string, string> > cache_;$/;"	m	class:Text	access:private
 Text::calMatch	Text.cpp	/^std::string Text::calMatch(const std::string &str) $/;"	f	class:Text	signature:(const std::string &str)
 Text::calMatch	Text.h	/^		std::string calMatch(const std::string&);$/;"	p	class:Text	access:public	signature:(const std::string&)
-Text::handleReference	Text.h	/^		void handleReference(const std::string&);\/\/对所有词汇编写索引$/;"	p	class:Text	access:private	signature:(const std::string&)
+Text::library_	Text.h	/^		std::unordered_map<std::string, int> library_;$/;"	m	class:Text	access:private
 Text::print	Text.cpp	/^void Text::print() const{$/;"	f	class:Text	signature:() const
 Text::print	Text.h	/^		void print()const;$/;"	p	class:Text	access:public	signature:() const
 Text::readWord	Text.cpp	/^void Text::readWord(const string &st) {$/;"	f	class:Text	signature:(const string &st)
-Text::readWord	Text.h	/^		int readWord(const std::string&);\/\/读入所有词汇$/;"	p	class:Text	access:private	signature:(const std::string&)
-Text::references_	Text.h	/^		std::unordered_map<uint32_t, std::unordered_map<std::string, int> > references_;$/;"	m	class:Text	access:private
-Text::writeToFile	Text.cpp	/^void Text::writeToFile()const$/;"	f	class:Text	signature:() const
-Text::writeToFile	Text.h	/^		void writeToFile()const;$/;"	p	class:Text	access:public	signature:() const
+Text::readWord	Text.h	/^		void readWord(const std::string&);\/\/读入所有词汇$/;"	p	class:Text	access:private	signature:(const std::string&)
+Text::references_	Text.h	/^		std::unordered_map<uint32_t, std::unordered_map<std::string, std::vector<uint32_t> > > references_;$/;"	m	class:Text	access:private
 Text::~Text	Text.h	/^		~Text () {};$/;"	f	class:Text	access:public	signature:()
 ThP	QueryServer.h	/^		ThreadPool ThP;$/;"	m	class:QueryServer	access:private
 Thread	Thread.cpp	/^Thread::Thread()$/;"	f	class:Thread	signature:()
@@ -386,12 +389,10 @@ TimerThread::startTimerThread	TimerThread.cpp	/^void TimerThread::startTimerThre
 TimerThread::startTimerThread	TimerThread.h	/^        void startTimerThread();$/;"	p	class:TimerThread	access:public	signature:()
 TimerThread::thread_	TimerThread.h	/^        Thread thread_; $/;"	m	class:TimerThread	access:private
 TimerThread::timer_	TimerThread.h	/^        Timer timer_;$/;"	m	class:TimerThread	access:private
-Zi	handle.cpp	/^	uint32_t Zi(const std::string &st)$/;"	f	namespace:string_handle	signature:(const std::string &st)
-Zi	handle.h	/^	uint32_t Zi(const std::string&);$/;"	p	namespace:string_handle	signature:(const std::string&)
 accept	Socket.cpp	/^int Socket::accept()$/;"	f	class:Socket	signature:()
 accept	Socket.h	/^        int accept();$/;"	p	class:Socket	access:public	signature:()
-add	cache.cpp	/^void cache::add(std::pair<std::string, std::string> &pr) $/;"	f	class:cache	signature:(std::pair<std::string, std::string> &pr)
-add	cache.h	/^		void add(std::pair<std::string, std::string>&);$/;"	p	class:cache	access:public	signature:(std::pair<std::string, std::string>&)
+add	cache.cpp	/^void cache::add(const std::string &st1, const std::string &st2) $/;"	f	class:cache	signature:(const std::string &st1, const std::string &st2)
+add	cache.h	/^		void add(const std::string&, const std::string&);$/;"	p	class:cache	access:public	signature:(const std::string&, const std::string&)
 addTask	ThreadPool.cpp	/^void ThreadPool::addTask(const Task &task)$/;"	f	class:ThreadPool	signature:(const Task &task)
 addTask	ThreadPool.h	/^        void addTask(const Task &);$/;"	p	class:ThreadPool	access:public	signature:(const Task &)
 addr_	InetAddress.h	/^        struct sockaddr_in addr_;$/;"	m	class:InetAddress	typeref:struct:InetAddress::sockaddr_in	access:private
@@ -400,17 +401,42 @@ bindAddress	Socket.h	/^        void bindAddress(const InetAddress &addr);$/;"	p	
 buffer_	Rio.h	/^        char buffer_[RIO_BUFFER];$/;"	m	class:Rio	access:private
 buffer_	TcpConnection.h	/^        Rio buffer_;     \/\/该连接的读写缓冲区$/;"	m	class:TcpConnection	access:private
 bufptr_	Rio.h	/^        char *bufptr_;$/;"	m	class:Rio	access:private
-cache	cache.h	/^		cache(): hold(false), cacher() {};$/;"	f	class:cache	access:public	signature:()
-cache	cache.h	/^class cache : NonCopyable$/;"	c	inherits:NonCopyable
-cache::add	cache.cpp	/^void cache::add(std::pair<std::string, std::string> &pr) $/;"	f	class:cache	signature:(std::pair<std::string, std::string> &pr)
-cache::add	cache.h	/^		void add(std::pair<std::string, std::string>&);$/;"	p	class:cache	access:public	signature:(std::pair<std::string, std::string>&)
-cache::cache	cache.h	/^		cache(): hold(false), cacher() {};$/;"	f	class:cache	access:public	signature:()
-cache::cacher_	cache.h	/^		std::list<std::pair<std::string, std::string> > cacher_;$/;"	m	class:cache	access:private
-cache::hold	cache.h	/^		bool hold;$/;"	m	class:cache	access:private
-cache::isHold	cache.h	/^		bool isHold() { return hold; }$/;"	f	class:cache	access:public	signature:()
+cacMan_	correct.h	/^		cacheManager cacMan_;$/;"	m	class:correct	access:private
+cache	cache.h	/^		cache(): hold_(false) {};$/;"	f	class:cache	access:public	signature:()
+cache	cache.h	/^class cache$/;"	c
+cache::Hold	cache.h	/^		void Hold() { hold_ = true; }$/;"	f	class:cache	access:public	signature:()
+cache::OutToFile	cache.cpp	/^const std::string cache::OutToFile() const {$/;"	f	class:cache	signature:() const
+cache::OutToFile	cache.h	/^		std::string OutToFile() const;$/;"	p	class:cache	access:public	signature:() const
+cache::add	cache.cpp	/^void cache::add(const std::string &st1, const std::string &st2) $/;"	f	class:cache	signature:(const std::string &st1, const std::string &st2)
+cache::add	cache.h	/^		void add(const std::string&, const std::string&);$/;"	p	class:cache	access:public	signature:(const std::string&, const std::string&)
+cache::cache	cache.h	/^		cache(): hold_(false) {};$/;"	f	class:cache	access:public	signature:()
+cache::cacher_list_	cache.h	/^		list_pair cacher_list_;$/;"	m	class:cache	access:private
+cache::cacher_map_	cache.h	/^		map_str_it cacher_map_;$/;"	m	class:cache	access:private
+cache::deHold	cache.h	/^		void deHold() { hold_ = false; }$/;"	f	class:cache	access:public	signature:()
+cache::hold_	cache.h	/^		bool hold_;$/;"	m	class:cache	access:private
+cache::isExist	cache.cpp	/^const std::string cache::isExist(const std::string &st)$/;"	f	class:cache	signature:(const std::string &st)
+cache::isExist	cache.h	/^		const std::string isExist(const std::string&);$/;"	p	class:cache	access:public	signature:(const std::string&)
+cache::isHold	cache.h	/^		bool isHold()const{ return hold_; }$/;"	f	class:cache	access:public	signature:() const
+cache::list_pair	cache.h	/^		typedef std::list<std::pair<std::string, std::string> > list_pair;$/;"	t	class:cache	access:public
+cache::map_str_it	cache.h	/^		typedef std::unordered_map<std::string, list_pair::iterator> map_str_it;$/;"	t	class:cache	access:public
+cacheManager	cacheManager.h	/^		cacheManager(size_t i):Full_(0), full_(mutex_), cachers_(i, cache()){};$/;"	f	class:cacheManager	access:public	signature:(size_t i)
+cacheManager	cacheManager.h	/^class cacheManager : NonCopyable$/;"	c	inherits:NonCopyable
+cacheManager::Full_	cacheManager.h	/^		size_t Full_;$/;"	m	class:cacheManager	access:private
+cacheManager::cacheManager	cacheManager.h	/^		cacheManager(size_t i):Full_(0), full_(mutex_), cachers_(i, cache()){};$/;"	f	class:cacheManager	access:public	signature:(size_t i)
+cacheManager::cachers_	cacheManager.h	/^		std::vector<cache> cachers_;$/;"	m	class:cacheManager	access:private
+cacheManager::findCache	cacheManager.cpp	/^cache& cacheManager::findCache()$/;"	f	class:cacheManager	signature:()
+cacheManager::findCache	cacheManager.h	/^		cache& findCache();$/;"	p	class:cacheManager	access:private	signature:()
+cacheManager::full_	cacheManager.h	/^		Condition full_;$/;"	m	class:cacheManager	access:private
+cacheManager::goCache	cacheManager.cpp	/^cache& cacheManager::goCache()$/;"	f	class:cacheManager	signature:()
+cacheManager::goCache	cacheManager.h	/^		cache& goCache();$/;"	p	class:cacheManager	access:public	signature:()
+cacheManager::isFull	cacheManager.h	/^		bool isFull() { return Full_ == cachers_.size(); }$/;"	f	class:cacheManager	access:public	signature:()
+cacheManager::mutex_	cacheManager.h	/^		MutexLock mutex_;$/;"	m	class:cacheManager	access:private
+cacheManager::writeToFile	cacheManager.cpp	/^void cacheManager::writeToFile() const {$/;"	f	class:cacheManager	signature:() const
+cacheManager::writeToFile	cacheManager.h	/^		void writeToFile() const;$/;"	p	class:cacheManager	access:public	signature:() const
 cachePool	cachePool.h	/^class cachePool : NonCopyable {$/;"	c	inherits:NonCopyable
-cache_	Text.h	/^		std::list<std::pair<string, string> > cache_;$/;"	m	class:Text	access:private
-cacher_	cache.h	/^		std::list<std::pair<std::string, std::string> > cacher_;$/;"	m	class:cache	access:private
+cacher_list_	cache.h	/^		list_pair cacher_list_;$/;"	m	class:cache	access:private
+cacher_map_	cache.h	/^		map_str_it cacher_map_;$/;"	m	class:cache	access:private
+cachers_	cacheManager.h	/^		std::vector<cache> cachers_;$/;"	m	class:cacheManager	access:private
 calLessRound	handle.cpp	/^	int calLessRound(const std::vector<uint32_t> &st1 ,const std::vector<uint32_t> &st2)$/;"	f	namespace:string_handle	signature:(const std::vector<uint32_t> &st1 ,const std::vector<uint32_t> &st2)
 calLessRound	handle.h	/^	int calLessRound(const std::vector<uint32_t>&, const std::vector<uint32_t>&);$/;"	p	namespace:string_handle	signature:(const std::vector<uint32_t>&, const std::vector<uint32_t>&)
 calMatch	Text.cpp	/^std::string Text::calMatch(const std::string &str) $/;"	f	class:Text	signature:(const std::string &str)
@@ -427,6 +453,7 @@ correct	correct.h	/^		correct();		$/;"	p	class:correct	access:public	signature:(
 correct	correct.h	/^class correct $/;"	c
 correct::HandleRequest	correct.cpp	/^void correct::HandleRequest(const TcpConnectionPtr &conn, const std::string &st)$/;"	f	class:correct	signature:(const TcpConnectionPtr &conn, const std::string &st)
 correct::HandleRequest	correct.h	/^		void HandleRequest(const TcpConnectionPtr&, const std::string&);$/;"	p	class:correct	access:private	signature:(const TcpConnectionPtr&, const std::string&)
+correct::cacMan_	correct.h	/^		cacheManager cacMan_;$/;"	m	class:correct	access:private
 correct::correct	correct.cpp	/^correct::correct():netAddress_(8989),$/;"	f	class:correct	signature:()
 correct::correct	correct.h	/^		correct();		$/;"	p	class:correct	access:public	signature:()
 correct::netAddress_	correct.h	/^		InetAddress netAddress_;$/;"	m	class:correct	access:private
@@ -444,6 +471,7 @@ correct::start	correct.h	/^		void start();$/;"	p	class:correct	access:public	sig
 correct::threads_	correct.h	/^		ThreadPool threads_;$/;"	m	class:correct	access:private
 correct::timeThread_	correct.h	/^		TimerThread timeThread_;$/;"	m	class:correct	access:private
 correct::txt_	correct.h	/^		Text txt_;$/;"	m	class:correct	access:private
+deHold	cache.h	/^		void deHold() { hold_ = false; }$/;"	f	class:cache	access:public	signature:()
 destroyInstance	SingleTon.cpp	/^		static void destroyInstance() {$/;"	f	class:Singleton	access:public	signature:()
 empty_	ThreadPool.h	/^        Condition empty_;  $/;"	m	class:ThreadPool	access:private
 event_	PollPoller.h	/^        struct pollfd event_[2048];$/;"	m	class:PollPoller	typeref:struct:PollPoller::pollfd	access:private
@@ -452,7 +480,10 @@ fd	TcpConnection.h	/^        int fd() const$/;"	f	class:TcpConnection	access:pub
 fd_	Rio.h	/^        int fd_;$/;"	m	class:Rio	access:private
 fillStackTrace	Exception.cpp	/^void Exception::fillStackTrace()$/;"	f	class:Exception	signature:()
 fillStackTrace	Exception.h	/^        void fillStackTrace();  \/\/填充栈痕迹$/;"	p	class:Exception	access:private	signature:()
+findCache	cacheManager.cpp	/^cache& cacheManager::findCache()$/;"	f	class:cacheManager	signature:()
+findCache	cacheManager.h	/^		cache& findCache();$/;"	p	class:cacheManager	access:private	signature:()
 full_	ThreadPool.h	/^        Condition full_;$/;"	m	class:ThreadPool	access:private
+full_	cacheManager.h	/^		Condition full_;$/;"	m	class:cacheManager	access:private
 getInstance	SingleTon.cpp	/^		static Singleton *getInstance() {$/;"	f	class:Singleton	access:public	signature:()
 getLocalAddr	TcpConnection.h	/^        const InetAddress &getLocalAddr() const$/;"	f	class:TcpConnection	access:public	signature:() const
 getLocalAddress	InetAddress.cpp	/^InetAddress InetAddress::getLocalAddress(int sockfd)$/;"	f	class:InetAddress	signature:(int sockfd)
@@ -464,6 +495,8 @@ getPeerAddress	InetAddress.h	/^        static InetAddress getPeerAddress(int soc
 getSockAddrInet	InetAddress.h	/^        const struct sockaddr_in *getSockAddrInet() const$/;"	f	class:InetAddress	access:public	signature:() const
 getTask	ThreadPool.cpp	/^ThreadPool::Task ThreadPool::getTask()$/;"	f	class:ThreadPool	signature:()
 getTask	ThreadPool.h	/^        Task getTask();$/;"	p	class:ThreadPool	access:private	signature:()
+goCache	cacheManager.cpp	/^cache& cacheManager::goCache()$/;"	f	class:cacheManager	signature:()
+goCache	cacheManager.h	/^		cache& goCache();$/;"	p	class:cacheManager	access:public	signature:()
 handleAccept	PollPoller.cpp	/^void PollPoller::handleAccept()$/;"	f	class:PollPoller	signature:()
 handleAccept	PollPoller.h	/^        void handleAccept();$/;"	p	class:PollPoller	access:public	signature:()
 handleClose	TcpConnection.cpp	/^void TcpConnection::handleClose()$/;"	f	class:TcpConnection	signature:()
@@ -480,13 +513,15 @@ handleMessage	TcpConnection.cpp	/^void TcpConnection::handleMessage()$/;"	f	clas
 handleMessage	TcpConnection.h	/^        void handleMessage();$/;"	p	class:TcpConnection	access:public	signature:()
 handleMessageEvent	PollPoller.cpp	/^void PollPoller::handleMessageEvent(int peerfd)$/;"	f	class:PollPoller	signature:(int peerfd)
 handleMessageEvent	PollPoller.h	/^        void handleMessageEvent(int peerfd);$/;"	p	class:PollPoller	access:public	signature:(int peerfd)
-handleReference	Text.h	/^		void handleReference(const std::string&);\/\/对所有词汇编写索引$/;"	p	class:Text	access:private	signature:(const std::string&)
-hold	cache.h	/^		bool hold;$/;"	m	class:cache	access:private
+hold_	cache.h	/^		bool hold_;$/;"	m	class:cache	access:private
 howlong_	Timer.h	/^        struct itimerspec howlong_;$/;"	m	class:Timer	typeref:struct:Timer::itimerspec	access:private
 initInstance	SingleTon.cpp	/^		static void initInstance() {$/;"	f	class:Singleton	access:public	signature:()
 initObj	TcpServer.cpp	/^IgnoreSigpipe initObj;  \/\/全局对象，系统初始化时必然处理SIGPIPE$/;"	v
 ipNetEndian	InetAddress.h	/^        uint32_t ipNetEndian() const$/;"	f	class:InetAddress	access:public	signature:() const
-isHold	cache.h	/^		bool isHold() { return hold; }$/;"	f	class:cache	access:public	signature:()
+isExist	cache.cpp	/^const std::string cache::isExist(const std::string &st)$/;"	f	class:cache	signature:(const std::string &st)
+isExist	cache.h	/^		const std::string isExist(const std::string&);$/;"	p	class:cache	access:public	signature:(const std::string&)
+isFull	cacheManager.h	/^		bool isFull() { return Full_ == cachers_.size(); }$/;"	f	class:cacheManager	access:public	signature:()
+isHold	cache.h	/^		bool isHold()const{ return hold_; }$/;"	f	class:cache	access:public	signature:() const
 isLocked	MutexLock.h	/^        bool isLocked() const { return isLocked_; }$/;"	f	class:MutexLock	access:public	signature:() const
 isLocked_	MutexLock.h	/^        bool isLocked_;$/;"	m	class:MutexLock	access:private
 isStarted_	Thread.h	/^        bool isStarted_;$/;"	m	class:Thread	access:private
@@ -495,6 +530,8 @@ isStarted_	Timer.h	/^        bool isStarted_;  \/\/是否开启$/;"	m	class:Time
 join	Thread.cpp	/^void Thread::join()$/;"	f	class:Thread	signature:()
 join	Thread.h	/^        void join();$/;"	p	class:Thread	access:public	signature:()
 left_	Rio.h	/^        int left_;$/;"	m	class:Rio	access:private
+library_	Text.h	/^		std::unordered_map<std::string, int> library_;$/;"	m	class:Text	access:private
+list_pair	cache.h	/^		typedef std::list<std::pair<std::string, std::string> > list_pair;$/;"	t	class:cache	access:public
 listen	Socket.cpp	/^void Socket::listen()$/;"	f	class:Socket	signature:()
 listen	Socket.h	/^        void listen();$/;"	p	class:Socket	access:public	signature:()
 listenfd_	PollPoller.h	/^        int listenfd_;$/;"	m	class:PollPoller	access:private
@@ -503,6 +540,7 @@ localAddr_	TcpConnection.h	/^        const InetAddress localAddr_;  \/\/Local$/;
 lock	MutexLock.h	/^        void lock();$/;"	p	class:MutexLock	access:private	signature:()
 lock	MutexLock.h	/^inline void MutexLock::lock()$/;"	f	class:MutexLock	signature:()
 main	Test.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+map_str_it	cache.h	/^		typedef std::unordered_map<std::string, list_pair::iterator> map_str_it;$/;"	t	class:cache	access:public
 matchNum_	handle.h	/^		int matchNum_;$/;"	m	struct:string_handle::matchWord	access:public
 matchWord	handle.h	/^		explicit matchWord(const std::string &st, int cnt, int matchNum):$/;"	f	struct:string_handle::matchWord	access:public	signature:(const std::string &st, int cnt, int matchNum)
 matchWord	handle.h	/^	struct matchWord$/;"	s	namespace:string_handle
@@ -512,6 +550,7 @@ mutex_	Condition.h	/^        MutexLock &mutex_;$/;"	m	class:Condition	access:pri
 mutex_	MutexLock.h	/^        MutexLock &mutex_;$/;"	m	class:MutexLockGuard	access:private
 mutex_	MutexLock.h	/^        pthread_mutex_t mutex_;$/;"	m	class:MutexLock	access:private
 mutex_	ThreadPool.h	/^        mutable MutexLock mutex_;$/;"	m	class:ThreadPool	access:private
+mutex_	cacheManager.h	/^		MutexLock mutex_;$/;"	m	class:cacheManager	access:private
 netAddress_	correct.h	/^		InetAddress netAddress_;$/;"	m	class:correct	access:private
 notify	Condition.cpp	/^void Condition::notify()$/;"	f	class:Condition	signature:()
 notify	Condition.h	/^        void notify();$/;"	p	class:Condition	access:public	signature:()
@@ -557,7 +596,7 @@ read	Rio.h	/^        ssize_t read(char *usrbuf, size_t n);$/;"	p	class:Rio	acces
 readLine	TcpConnection.cpp	/^ssize_t TcpConnection::readLine(char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(char *usrbuf, size_t n)
 readLine	TcpConnection.h	/^        ssize_t readLine(char *usrbuf, size_t maxline);$/;"	p	class:TcpConnection	access:public	signature:(char *usrbuf, size_t maxline)
 readWord	Text.cpp	/^void Text::readWord(const string &st) {$/;"	f	class:Text	signature:(const string &st)
-readWord	Text.h	/^		int readWord(const std::string&);\/\/读入所有词汇$/;"	p	class:Text	access:private	signature:(const std::string&)
+readWord	Text.h	/^		void readWord(const std::string&);\/\/读入所有词汇$/;"	p	class:Text	access:private	signature:(const std::string&)
 readline	Rio.cpp	/^ssize_t Rio::readline(char *usrbuf, size_t maxlen)$/;"	f	class:Rio	signature:(char *usrbuf, size_t maxlen)
 readline	Rio.h	/^        ssize_t readline(char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(char *usrbuf, size_t n)
 readn	Rio.cpp	/^ssize_t Rio::readn(char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(char *usrbuf, size_t n)
@@ -566,7 +605,7 @@ readn	TcpConnection.cpp	/^ssize_t TcpConnection::readn(char *usrbuf, size_t n)$/
 readn	TcpConnection.h	/^        ssize_t readn(char *usrbuf, size_t n);$/;"	p	class:TcpConnection	access:public	signature:(char *usrbuf, size_t n)
 receive	TcpConnection.cpp	/^std::string TcpConnection::receive()$/;"	f	class:TcpConnection	signature:()
 receive	TcpConnection.h	/^        std::string receive();$/;"	p	class:TcpConnection	access:public	signature:()
-references_	Text.h	/^		std::unordered_map<uint32_t, std::unordered_map<std::string, int> > references_;$/;"	m	class:Text	access:private
+references_	Text.h	/^		std::unordered_map<uint32_t, std::unordered_map<std::string, std::vector<uint32_t> > > references_;$/;"	m	class:Text	access:private
 runInThread	ThreadPool.cpp	/^void ThreadPool::runInThread()$/;"	f	class:ThreadPool	signature:()
 runInThread	ThreadPool.h	/^        void runInThread();  \/\/线程池内线程的回调函数$/;"	p	class:ThreadPool	access:private	signature:()
 runTimer	Timer.cpp	/^void Timer::runTimer()$/;"	f	class:Timer	signature:()
@@ -622,8 +661,6 @@ stop	ThreadPool.cpp	/^void ThreadPool::stop()$/;"	f	class:ThreadPool	signature:(
 stop	ThreadPool.h	/^        void stop();  \/\/停止线程池$/;"	p	class:ThreadPool	access:public	signature:()
 string_handle	handle.cpp	/^namespace string_handle{$/;"	n	file:
 string_handle	handle.h	/^namespace string_handle{$/;"	n
-string_handle::Zi	handle.cpp	/^	uint32_t Zi(const std::string &st)$/;"	f	namespace:string_handle	signature:(const std::string &st)
-string_handle::Zi	handle.h	/^	uint32_t Zi(const std::string&);$/;"	p	namespace:string_handle	signature:(const std::string&)
 string_handle::calLessRound	handle.cpp	/^	int calLessRound(const std::vector<uint32_t> &st1 ,const std::vector<uint32_t> &st2)$/;"	f	namespace:string_handle	signature:(const std::vector<uint32_t> &st1 ,const std::vector<uint32_t> &st2)
 string_handle::calLessRound	handle.h	/^	int calLessRound(const std::vector<uint32_t>&, const std::vector<uint32_t>&);$/;"	p	namespace:string_handle	signature:(const std::vector<uint32_t>&, const std::vector<uint32_t>&)
 string_handle::matchWord	handle.h	/^	struct matchWord$/;"	s	namespace:string_handle
@@ -633,7 +670,7 @@ string_handle::matchWord::matchWord	handle.h	/^		explicit matchWord(const std::s
 string_handle::matchWord::operator <	handle.h	/^		bool operator < (const matchWord &A) const $/;"	f	struct:string_handle::matchWord	access:public	signature:(const matchWord &A) const
 string_handle::matchWord::word_	handle.h	/^		std::string word_;$/;"	m	struct:string_handle::matchWord	access:public
 string_handle::translate	handle.cpp	/^	std::vector<uint32_t> translate(const std::string &st) {$/;"	f	namespace:string_handle	signature:(const std::string &st)
-string_handle::translate	handle.h	/^	vector<uint32_t> translate(const std::string&);$/;"	p	namespace:string_handle	signature:(const std::string&)
+string_handle::translate	handle.h	/^	std::vector<uint32_t> translate(const std::string&);$/;"	p	namespace:string_handle	signature:(const std::string&)
 threadFunc	Thread.cpp	/^void *Thread::threadFunc(void *arg)$/;"	f	class:Thread	signature:(void *arg)
 threadFunc	Thread.h	/^        static void *threadFunc(void *);$/;"	p	class:Thread	access:private	signature:(void *)
 thread_	TimerThread.h	/^        Thread thread_; $/;"	m	class:TimerThread	access:private
@@ -649,7 +686,7 @@ toIp	InetAddress.h	/^        std::string toIp() const;$/;"	p	class:InetAddress	a
 toPort	InetAddress.cpp	/^uint16_t InetAddress::toPort() const$/;"	f	class:InetAddress	signature:() const
 toPort	InetAddress.h	/^        uint16_t toPort() const;$/;"	p	class:InetAddress	access:public	signature:() const
 translate	handle.cpp	/^	std::vector<uint32_t> translate(const std::string &st) {$/;"	f	namespace:string_handle	signature:(const std::string &st)
-translate	handle.h	/^	vector<uint32_t> translate(const std::string&);$/;"	p	namespace:string_handle	signature:(const std::string&)
+translate	handle.h	/^	std::vector<uint32_t> translate(const std::string&);$/;"	p	namespace:string_handle	signature:(const std::string&)
 txt_	correct.h	/^		Text txt_;$/;"	m	class:correct	access:private
 unlock	MutexLock.h	/^        void unlock();$/;"	p	class:MutexLock	access:private	signature:()
 unlock	MutexLock.h	/^inline void MutexLock::unlock()$/;"	f	class:MutexLock	signature:()
@@ -658,8 +695,8 @@ wait	Condition.h	/^        void wait();$/;"	p	class:Condition	access:public	sign
 what	Exception.cpp	/^const char *Exception::what() const throw()$/;"	f	class:Exception	signature:() const
 what	Exception.h	/^        virtual const char * what() const throw();$/;"	p	class:Exception	access:public	signature:() const
 word_	handle.h	/^		std::string word_;$/;"	m	struct:string_handle::matchWord	access:public
-writeToFile	Text.cpp	/^void Text::writeToFile()const$/;"	f	class:Text	signature:() const
-writeToFile	Text.h	/^		void writeToFile()const;$/;"	p	class:Text	access:public	signature:() const
+writeToFile	cacheManager.cpp	/^void cacheManager::writeToFile() const {$/;"	f	class:cacheManager	signature:() const
+writeToFile	cacheManager.h	/^		void writeToFile() const;$/;"	p	class:cacheManager	access:public	signature:() const
 writen	Rio.cpp	/^ssize_t Rio::writen(const char *usrbuf, size_t n)$/;"	f	class:Rio	signature:(const char *usrbuf, size_t n)
 writen	Rio.h	/^        ssize_t writen(const char *usrbuf, size_t n);$/;"	p	class:Rio	access:public	signature:(const char *usrbuf, size_t n)
 writen	TcpConnection.cpp	/^ssize_t TcpConnection::writen(const char *usrbuf, size_t n)$/;"	f	class:TcpConnection	signature:(const char *usrbuf, size_t n)

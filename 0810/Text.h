@@ -23,15 +23,11 @@ class Text {
 		void print()const;
 		std::string calMatch(const std::string&);
 		bool Match(const std::string &st) 
-		{   uint32_t fir = string_handle::Zi(st);
-			return references_[fir].find(st) != references_[fir].end(); }
-		void writeToFile()const;
+		{ return library_.find(st) != library_.end(); }
 	private:
 		//处理初始化
-		int readWord(const std::string&);//读入所有词汇
-		void handleReference(const std::string&);//对所有词汇编写索引
-		std::unordered_map<uint32_t, std::unordered_map<std::string, int> > references_;
-		std::list<std::pair<string, string> > cache_;
-	//内嵌匹配类
+		void readWord(const std::string&);//读入所有词汇
+		std::unordered_map<std::string, int> library_;
+		std::unordered_map<uint32_t, std::unordered_map<std::string, std::vector<uint32_t> > > references_;
 };
 #endif  /*TEXT_H*/

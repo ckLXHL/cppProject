@@ -2,9 +2,10 @@
 #include <functional>
 correct::correct():netAddress_(8989),
 				   server_(netAddress_),
-				   txt_("correct.cpp"),
+				   txt_("./dictionary"),
 				   timeThread_(),
-				   threads_(5, 5)
+				   threads_(5, 5),
+				   cacMan_(5)
 {
 	setFunc();
 }
@@ -12,7 +13,7 @@ correct::correct():netAddress_(8989),
 
 void correct::setFunc()
 {
-	timeThread_.setTimerCallback(std::bind(&Text::writeToFile, &txt_));
+	timeThread_.setTimerCallback(std::bind(&cacheManager::writeToFile, &cacMan_));
 	timeThread_.setTimer(60, 60);
 	threads_.start();
 	server_.setConnection(std::bind(&correct::onConnection, this, std::placeholders::_1));
@@ -39,8 +40,15 @@ void correct::HandleRequest(const TcpConnectionPtr &conn, const std::string &st)
 		std::cout << "find " << st << std::endl;
 	}
 	else {
-		conn->send(std::string("no find\nsuggestion:\n") + txt_.calMatch(st) + "\r\n");
-		std::cout << "no find " << std::endl;
+		cache& cac= cacMan_.goCache();
+		std::string answer = cac.isExist(st);
+		if (answer == "") {
+			answer == txt_.calMatch(st);
+			cac.add(st, answer);
+		}
+		conn->send(std::string("no find\nsuggestion:\n") + answer + "\r\n");
+		std::cout << "no find " << st <<std::endl;
+		cac.deHold();
 	}
 }
 void correct::onClose(const TcpConnectionPtr&) 

@@ -1,10 +1,10 @@
 #ifndef HANDLE_H
 #define HANDLE_H 
+#include <vector>
+#include <string>
 namespace string_handle{
-	vector<uint32_t> translate(const std::string&);
+	std::vector<uint32_t> translate(const std::string&);
 	int calLessRound(const std::vector<uint32_t>&, const std::vector<uint32_t>&);
-	uint32_t Zi(const std::string&);
-
 	struct matchWord
 	{
 		explicit matchWord(const std::string &st, int cnt, int matchNum):

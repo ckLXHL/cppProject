@@ -5,9 +5,11 @@
 #include <cstdlib>
 #include <cstring>
 #include <ctype.h>
+#include <list>
 using namespace std;
 int main(int argc, const char *argv[])
 {
+	list<int> ls;
 	locale def;
 	cout << def.name() << endl;
 	locale current = cout.getloc();

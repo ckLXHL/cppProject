@@ -7,6 +7,7 @@
 #include "InetAddress.h"
 #include "TcpConnection.h"
 #include "ThreadPool.h"
+#include "cacheManager.h"
 class correct 
 {
 	public:
@@ -25,5 +26,6 @@ class correct
 		Text txt_;
 		TimerThread timeThread_;
 		ThreadPool threads_;
+		cacheManager cacMan_;
 };
 #endif  /*correct.h*/
