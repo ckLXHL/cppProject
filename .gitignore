@@ -1,4 +1,6 @@
 .*.swp
+bin
+obj
 test
 *.o
 a.out
