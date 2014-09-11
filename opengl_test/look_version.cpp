@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include <OpenGL/gl.h>
+#include <OpenGL/gl3.h>
 #include <GLUT/glut.h>
 int main(int argc, char** argv)
 {
